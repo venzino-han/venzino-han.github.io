@@ -1,0 +1,5 @@
+{%- for section in site.sections -%}
+  {%- if section == "education" and site.sidebar_education -%}{%- continue -%}{%- endif -%}
+  {%- capture section_file -%}sections/{{ section }}.html{%- endcapture -%}
+  {% include {{ section_file }} %}
+{%- endfor -%}

@@ -1,0 +1,39 @@
+---
+---
+{% include init.html %}<!DOCTYPE html>
+<html lang="{{ lang }}">
+{% include head.html %}
+
+<body class="lang-{{ lang }}">
+  <nav class="toolbar d-print-none">
+    {% include lang-switch.html %}
+    <button type="button" onclick="printResume()" class="toolbar-button">
+      <i class="fas fa-print"></i>{{ ui.print }}
+    </button>
+    <button type="button" onclick="generatePDF()" class="toolbar-button" id="pdfButton">
+      <i class="fas fa-file-pdf"></i>{{ ui.pdf }}
+    </button>
+  </nav>
+
+  <div class="wrapper">
+    {% include sidebar.html %}
+
+    <div class="main-wrapper">
+      {% include cv.html %}
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+  <script>
+    window.RESUME = {
+      printUrl: "{{ site.baseurl }}{{ lang_info.url }}print/",
+      pdfName: "{{ d.sidebar.name | replace: ' ', '_' }}_{{ ui.pdf_suffix | default: 'CV' }}.pdf",
+      generating: "{{ ui.generating }}"
+    };
+  </script>
+  <script src="{{ site.baseurl }}/assets/js/pdf-generator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<div class="lang-switch">
+  <i class="fas fa-globe"></i>
+  {%- for l in site.languages -%}
+    {%- if l.code == lang -%}
+      <span class="lang-link active" aria-current="true">{{ l.label }}</span>
+    {%- else -%}
+      <a class="lang-link" href="{{ site.baseurl }}{{ l.url }}" hreflang="{{ l.code }}" lang="{{ l.code }}">{{ l.label }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

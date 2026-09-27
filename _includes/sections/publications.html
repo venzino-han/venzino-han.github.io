@@ -1,0 +1,37 @@
+{% assign publications = d.publications %}
+{% if publications %}
+<section class="section publications-section">
+  {% include section-title.html icon="file-alt" title=publications.title %}
+
+  {% if publications.intro %}
+  <div class="intro">
+    {{ publications.intro | markdownify }}
+  </div><!--//intro-->
+  {% endif %}
+
+  {% for group in publications.groups %}
+  <div class="publication-group">
+    {% if group.title %}<h3 class="publication-group-title">{{ group.title }}</h3>{% endif %}
+    <ol class="publication-list">
+      {% for paper in group.papers %}
+      <li class="item publication">
+        <div class="publication-title">
+          {% if paper.link %}<a href="{{ paper.link }}" target="_blank" rel="noopener">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
+          {% if paper.note %}<span class="publication-note">{{ paper.note }}</span>{% endif %}
+        </div>
+        <div class="publication-authors">{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+        <div class="publication-venue">
+          {{ paper.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% if paper.year %}, {{ paper.year }}{% endif %}
+        </div>
+        {% if paper.links %}
+        <div class="publication-links d-print-none">
+          {% for l in paper.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a>{% endfor %}
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endfor %}
+</section><!--//section-->
+{% endif %}

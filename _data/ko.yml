@@ -1,0 +1,170 @@
+#
+# 한국어 이력 데이터  →  https://<site>/ko/
+# 영문 버전은 _data/en.yml 에 있으며 구조(키 이름)가 동일합니다.
+#
+# - details, summary, authors, venue 값에는 Markdown 을 쓸 수 있습니다.
+# - 섹션 블록 전체를 지우거나 주석 처리하면 해당 섹션이 숨겨집니다.
+# - 섹션 순서는 _config.yml 의 `sections:` 에서 정합니다.
+# - YAML 문법 오류가 있으면 빌드가 실패합니다. ": " 또는 "#" 이 들어간 값은 따옴표로 감싸세요.
+#
+# TODO: 아래 값은 모두 예시입니다. 본인 정보로 바꿔주세요.
+
+description: 머신러닝을 연구하는 연구자이자 엔지니어입니다. # <meta description>
+
+# 화면 문구 (번역만 하고 키는 en.yml 과 동일하게 유지)
+ui:
+  locale: ko_KR
+  print: 인쇄
+  pdf: PDF
+  pdf_suffix: 이력서
+  generating: 생성 중...
+  timezone: 시간대
+  resume_pdf: 이력서 (PDF)
+
+sidebar:
+  name: Venzino Han
+  tagline: 머신러닝 연구자 / 소프트웨어 엔지니어
+  avatar: # assets/images/ 에 정사각형 사진(예: profile.jpg)을 넣고 파일명을 입력
+
+  # 연락처 및 링크 (비워두면 표시되지 않음)
+  email: your.email@example.com
+  phone:
+  website:
+  github: venzino-han
+  linkedin:
+  scholar:
+  orcid:
+  researchgate:
+  twitter:
+  pdf: # PDF 이력서 링크, 예: /assets/files/cv_ko.pdf
+
+  languages:
+    title: 언어
+    info:
+      - idiom: 한국어
+        level: 모국어
+      - idiom: 영어
+        level: 업무 가능
+
+  interests:
+    title: 관심사
+    info:
+      - item: 오픈소스
+        link:
+      - item: 러닝
+        link:
+
+profile:
+  title: 소개
+  summary: |
+    **머신러닝**과 그 실제 응용에 관심을 가진 연구자이자 엔지니어입니다.
+    연구 분야, 실무 경험, 앞으로의 목표를 두세 문장으로 요약해 주세요.
+  interests_title: 연구 분야
+  interests:
+    - 그래프 신경망
+    - 추천 시스템
+    - 표현 학습
+
+education:
+  title: 학력
+  info:
+    - degree: 컴퓨터공학 박사
+      university: 예시대학교
+      time: 2020 – 2025
+      details: |
+        학위논문: *예시 학위논문 제목*. 지도교수: 홍길동 교수
+    - degree: 컴퓨터공학 학사
+      university: 예시대학교
+      time: 2014 – 2020
+
+research:
+  title: 연구 경력
+  info:
+    - role: 대학원 연구원
+      organization: 예시대학교 AI 연구실
+      link: https://example.com
+      location: 서울
+      time: 2020 – 2025
+      details: |
+        - 그래프 기반의 새로운 모델 제안 (CONF 2024 게재)
+        - 대규모 벤치마크 데이터셋 구축
+      tags: [PyTorch, GNN, 추천 시스템]
+    - role: 연구 인턴
+      organization: 예시 연구센터
+      time: 2019.06 – 2019.08
+      details: |
+        - ... 연구 수행
+
+experiences:
+  title: 실무 경력
+  info:
+    - role: 머신러닝 엔지니어
+      organization: 예시 주식회사
+      location: 서울
+      time: 2025 – 현재
+      details: |
+        - N백만 사용자 대상 ML 파이프라인 설계 및 배포
+        - ... 을 통해 추론 지연시간 40% 단축
+      tags: [Python, Kubernetes, MLOps]
+
+publications:
+  title: 논문 실적
+  intro: |
+    \* 공동 제1저자. 전체 목록은 [Google Scholar](https://scholar.google.com) 참고.
+  groups:
+    - title: 국제 학술대회
+      papers:
+        - title: A Sample Paper Title on Graph Learning
+          authors: "**Venzino Han**, Coauthor A, Coauthor B"
+          venue: Proceedings of the Example Conference (CONF)
+          year: 2024
+          note: Oral
+          link: https://example.com
+          links:
+            - name: PDF
+              url: https://example.com
+            - name: Code
+              url: https://github.com/venzino-han
+    - title: 국제 학술지
+      papers:
+        - title: Another Sample Paper Title
+          authors: "Coauthor A\\*, **Venzino Han**\\*, Coauthor B"
+          venue: Example Journal of Machine Learning, 12(3)
+          year: 2023
+          links:
+            - name: DOI
+              url: https://doi.org/10.0000/example
+
+projects:
+  title: 프로젝트
+  intro: 주요 연구 및 개인 프로젝트입니다.
+  info:
+    - title: 예시 프로젝트
+      link: https://github.com/venzino-han
+      time: 2024
+      tagline: 프로젝트 한 줄 설명
+      details: |
+        - 무엇을 만들었고, 어떤 역할을 했으며, 결과는 어땠는지
+      tags: [PyTorch, FastAPI]
+
+awards:
+  title: 수상 및 장학
+  info:
+    - title: 최우수 논문상
+      organization: Example Conference 2024
+      time: 2024
+    - title: 대학원 연구 장학금
+      organization: 예시 재단
+      time: 2021 – 2023
+
+skills:
+  title: 기술 스택
+  groups:
+    - name: 언어
+      items: [Python, C++, SQL]
+    - name: ML / 데이터
+      items: [PyTorch, TensorFlow, scikit-learn, Pandas]
+    - name: 인프라 / 도구
+      items: [Docker, Kubernetes, Git, Linux]
+
+footer: # 푸터에 추가할 문구 (선택)

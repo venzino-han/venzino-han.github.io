@@ -1,0 +1,48 @@
+<head>
+  <title>{{ d.sidebar.name }}{% if d.sidebar.tagline %} | {{ d.sidebar.tagline }}{% endif %}</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  {% if site.chrome_mobile_color %}
+  <meta name="theme-color" content="{{ site.chrome_mobile_color }}">
+  {% endif %}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ d.description | default: d.sidebar.tagline | strip_html | strip_newlines }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ d.sidebar.name }}">
+  <meta property="og:description" content="{{ d.description | default: d.sidebar.tagline | strip_html | strip_newlines }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:locale" content="{{ ui.locale }}">
+  {% if d.sidebar.avatar %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/{{ d.sidebar.avatar }}">{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+
+  <!-- 언어별 대체 URL (검색엔진용) -->
+  {% for l in site.languages %}
+  <link rel="alternate" hreflang="{{ l.code }}" href="{{ site.url }}{{ site.baseurl }}{{ l.url }}">
+  {% endfor %}
+  {% assign default_lang_info = site.languages | where: "code", site.default_lang | first %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ default_lang_info.url }}">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+
+  <!-- Fonts: Roboto (영문) + Noto Sans KR (한글) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/font-awesome/css/all.min.css">
+
+  <!-- html2pdf library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>

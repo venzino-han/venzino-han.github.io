@@ -1,0 +1,171 @@
+#
+# English CV data  →  https://<site>/
+# The Korean version lives in _data/ko.yml and uses the same structure.
+#
+# - Values under `details`, `summary`, `authors`, `venue` support Markdown.
+# - Remove (or comment out) a whole block to hide that section.
+# - Section order is set by `sections:` in _config.yml.
+# - A YAML syntax error here breaks the build: quote values containing ": " or "#".
+#
+# TODO: every value below is SAMPLE content. Replace it with your own.
+
+description: Researcher & engineer working on machine learning. # <meta description>
+
+# UI labels (translate only; keys must match _data/ko.yml)
+ui:
+  locale: en_US
+  print: Print
+  pdf: PDF
+  pdf_suffix: CV
+  generating: Generating...
+  timezone: Timezone
+  resume_pdf: CV (PDF)
+
+sidebar:
+  name: Venzino Han
+  tagline: ML Researcher / Software Engineer
+  avatar: # put a square image (e.g. profile.jpg) in assets/images/ and write its file name here
+
+  # Contact & links (leave empty to hide)
+  email: your.email@example.com
+  phone:
+  website:
+  github: venzino-han
+  linkedin: # LinkedIn ID (linkedin.com/in/<id>)
+  scholar: # Google Scholar user ID (scholar.google.com/citations?user=<id>)
+  orcid: # 0000-0000-0000-0000
+  researchgate:
+  twitter:
+  pdf: # link to a PDF version of your CV, e.g. /assets/files/cv_en.pdf
+
+  languages:
+    title: Languages
+    info:
+      - idiom: Korean
+        level: Native
+      - idiom: English
+        level: Professional
+
+  interests:
+    title: Interests
+    info:
+      - item: Open Source
+        link:
+      - item: Running
+        link:
+
+profile:
+  title: About Me
+  summary: |
+    I am a researcher and engineer interested in **machine learning** and its
+    real-world applications. Write two or three sentences summarizing your
+    research focus, industry experience, and what you are looking for next.
+  interests_title: Research Interests
+  interests:
+    - Graph Neural Networks
+    - Recommender Systems
+    - Representation Learning
+
+education:
+  title: Education
+  info:
+    - degree: Ph.D. in Computer Science
+      university: Example University
+      time: 2020 – 2025
+      details: |
+        Thesis: *A Sample Thesis Title*. Advisor: Prof. Jane Doe
+    - degree: B.S. in Computer Science
+      university: Example University
+      time: 2014 – 2020
+
+research:
+  title: Research Experience
+  info:
+    - role: Graduate Researcher
+      organization: Example AI Lab, Example University
+      link: https://example.com
+      location: Seoul, Korea
+      time: 2020 – 2025
+      details: |
+        - Proposed a new graph-based model for ... (published at CONF 2024)
+        - Built a large-scale benchmark dataset for ...
+      tags: [PyTorch, GNN, Recommender Systems]
+    - role: Research Intern
+      organization: Example Research Center
+      time: 2019.06 – 2019.08
+      details: |
+        - Worked on ...
+
+experiences:
+  title: Work Experience
+  info:
+    - role: Machine Learning Engineer
+      organization: Example Corp.
+      location: Seoul, Korea
+      time: 2025 – Present
+      details: |
+        - Designed and deployed an ML pipeline serving N million users
+        - Reduced inference latency by 40% through ...
+      tags: [Python, Kubernetes, MLOps]
+
+publications:
+  title: Publications
+  intro: |
+    \* equal contribution. Full list on [Google Scholar](https://scholar.google.com).
+  groups:
+    - title: International Conferences
+      papers:
+        - title: A Sample Paper Title on Graph Learning
+          authors: "**Venzino Han**, Coauthor A, Coauthor B"
+          venue: Proceedings of the Example Conference (CONF)
+          year: 2024
+          note: Oral
+          link: https://example.com
+          links:
+            - name: PDF
+              url: https://example.com
+            - name: Code
+              url: https://github.com/venzino-han
+    - title: International Journals
+      papers:
+        - title: Another Sample Paper Title
+          authors: "Coauthor A\\*, **Venzino Han**\\*, Coauthor B"
+          venue: Example Journal of Machine Learning, 12(3)
+          year: 2023
+          links:
+            - name: DOI
+              url: https://doi.org/10.0000/example
+
+projects:
+  title: Projects
+  intro: Selected research and personal projects.
+  info:
+    - title: Sample Project
+      link: https://github.com/venzino-han
+      time: 2024
+      tagline: One-line description of the project.
+      details: |
+        - What you built, your role, and the outcome
+      tags: [PyTorch, FastAPI]
+
+awards:
+  title: Honors & Awards
+  info:
+    - title: Best Paper Award
+      organization: Example Conference 2024
+      time: 2024
+    - title: Graduate Research Fellowship
+      organization: Example Foundation
+      time: 2021 – 2023
+
+skills:
+  title: Skills
+  groups:
+    - name: Languages
+      items: [Python, C++, SQL]
+    - name: ML / Data
+      items: [PyTorch, TensorFlow, scikit-learn, Pandas]
+    - name: Infra / Tools
+      items: [Docker, Kubernetes, Git, Linux]
+
+footer: # extra footer text (optional)

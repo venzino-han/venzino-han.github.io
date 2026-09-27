@@ -1,0 +1,21 @@
+{% assign awards = d.awards %}
+{% if awards %}
+<section class="section awards-section">
+  {% include section-title.html icon="trophy" title=awards.title %}
+
+  {% for award in awards.info %}
+  <div class="item">
+    <div class="meta">
+      <div class="upper-row">
+        <h3 class="award-title">{{ award.title }}</h3>
+        <div class="time">{{ award.time }}</div>
+      </div>
+      {% if award.organization %}<div class="company">{{ award.organization }}</div>{% endif %}
+    </div>
+    {% if award.details %}
+    <div class="details">{{ award.details | markdownify }}</div>
+    {% endif %}
+  </div><!--//item-->
+  {% endfor %}
+</section><!--//section-->
+{% endif %}

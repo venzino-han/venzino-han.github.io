@@ -1,0 +1,13 @@
+# 로컬 미리보기: docker compose up  →  http://localhost:4000
+services:
+  jekyll:
+    image: ruby:3.3
+    working_dir: /srv/jekyll
+    environment:
+      BUNDLE_PATH: vendor/bundle
+    command: sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"
+    volumes:
+      - .:/srv/jekyll:Z
+    ports:
+      - 4000:4000
+      - 35729:35729
