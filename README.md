@@ -1,95 +1,86 @@
-# Donghee Han — Academic Homepage
+# Donghee Han — Personal Site
 
-[al-folio](https://github.com/alshedivat/al-folio) 기반 학술 홈페이지입니다.
-영문/한국어 두 언어를 지원하는 포크 [multi-language-al-folio](https://github.com/george-gca/multi-language-al-folio)(jekyll-polyglot)를 사용합니다.
+연구 경력, 논문 실적, 실무 경력을 소개하는 GitHub Pages 사이트입니다.
+Jekyll 기반이며 모든 내용은 YAML 로 관리하고, 영문/한국어 두 가지 버전을 제공합니다.
 
 - 영문: https://venzino-han.github.io/
 - 한국어: https://venzino-han.github.io/ko/
 
-한 페이지 구성입니다. 상단 메뉴 **About · Research · Publications · Experience · Education · Awards** 를 누르면 해당 섹션으로 이동하며(스크롤 위치에 따라 메뉴 강조), 검색(ctrl+k)·언어 전환(English/한국어)·다크 모드를 지원합니다.
-프로젝트 상세 설명은 Experience 의 각 프로젝트 제목을 누르면 열리는 별도 페이지(`/projects/...`)에 있습니다.
+한 페이지 구성이며, 상단 헤더 메뉴로 각 섹션(About · Research · Publications · Experience · Education · Awards)으로 이동합니다.
+About 상단에는 자동으로 넘어가는 배너가 있고, 헤더에서 언어 전환(EN/KO), 다크 모드, 인쇄(PDF 저장)를 할 수 있습니다.
+Experience 의 프로젝트 카드에서 "Details" 를 누르면 프로젝트 상세 페이지(`/projects/...`)가 열립니다.
 
-## 내용 수정 위치
+## 데이터 파일
 
-| 내용 | 파일 |
+| 파일 | 내용 |
 |------|------|
-| 배너 (자동 슬라이드) | `_data/en-us/banner.yml`, `_data/ko/banner.yml` |
-| About: 소개(바이오), 일하는 방식, 오른쪽 소속 정보, 프로필 사진 | `_pages/en-us/about.md`, `_pages/ko/about.md` |
-| Research (역량 요약·기술 스택), Experience, Education, Awards | `_data/en-us/cv.yml`, `_data/ko/cv.yml` (`section:` 값으로 섹션 지정) |
-| Publications (두 언어 공용) | `_bibliography/papers.bib` |
-| 프로젝트 상세 페이지 | `_projects/en-us/*.md`, `_projects/ko/*.md` |
-| 이메일·Scholar·GitHub·LinkedIn 아이콘 | `_data/socials.yml` |
-| 메뉴·섹션 이름, 화면 문구 | `_data/en-us/strings.yml`, `_data/ko/strings.yml` (`sections`) |
-| 섹션 순서, 사이트 설정 | `_config.yml` (`home_sections`) |
-| 학교·회사 로고 | `assets/img/logos/` (cv.yml 의 `logo:` 에 파일명) |
+| `_data/en.yml` | 영문 페이지 문구 (소개, 연구 분야, 경력, 학력, 수상, 버튼 라벨) |
+| `_data/ko.yml` | 한국어 페이지 문구 (`en.yml` 과 키 구조 동일) |
+| `_data/publications.yml` | 논문 목록 — **두 언어 공용** |
+| `_data/common.yml` | 이메일, GitHub/Scholar/LinkedIn ID, 프로필 사진, 피인용 수 등 공용 정보 |
+| `_projects/en/*.md`, `_projects/ko/*.md` | 프로젝트 상세 페이지 (역할·문제·접근·결과) |
 
-### 논문 추가 (`_bibliography/papers.bib`)
+### 논문 추가
 
-파일에 적힌 순서대로 연도별로 표시되므로, 새 논문은 해당 연도의 맨 위에 추가합니다.
+`_data/publications.yml` 맨 위(최신순)에 항목을 추가하면 연도별 그룹, 통계(논문 수·제1저자 수·저널 수), 필터가 자동으로 갱신됩니다.
 
-```bibtex
-@inproceedings{han2027example,
-  title     = {Paper Title},
-  author    = {Han, Donghee and Coauthor, A and Yi, Mun Yong},
-  booktitle = {Proceedings of ... (NeurIPS 2027)},
-  year      = {2027},
-  abbr      = {NeurIPS},          % 왼쪽 배지
-  selected  = {true},             % 소개 페이지 "selected publications"에 표시
-  note      = {First author},     % 부가 정보 (저자 역할, SCIE 등)
-  award     = {Selected for oral presentation.},
-  award_name = {Oral},            % 배지 이름
-  doi       = {10.xxxx/xxxxx},
-  arxiv     = {2701.00000},
-  html      = {https://...},      % 논문 페이지 링크
-  code      = {https://github.com/...},
-  bibtex_show = {true}            % BIB 버튼
-}
+```yaml
+- title: "Paper Title"
+  authors: [Donghee Han, Coauthor A, Mun Yong Yi]   # 선택. 본인 이름은 자동으로 굵게
+  venue_short: NeurIPS                               # 왼쪽 배지
+  venue: The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 2026)
+  year: 2026
+  type: conference        # conference | journal
+  role: first             # first | co-first | second | co-author
+  note: Oral              # 선택. 언어별로 다르게: {en: Oral presentation, ko: 구두 발표}
+  links:                  # 선택. 필요한 것만
+    doi: 10.xxxx/xxxxx
+    arxiv: "2601.00000"
+    url: https://...
+    pdf: /assets/files/paper.pdf
+    code: https://github.com/...
 ```
 
-- 본인 이름(`Han, Donghee`)은 `_config.yml` 의 `scholar.first_name`/`last_name` 설정으로 자동 강조됩니다.
-- 공동 제1저자 표시(\*)가 필요하면 저자 이름 뒤에 `*` 를 붙이면 됩니다 (예: `Han*, Donghee`).
-- 2026년 채택 논문 7편의 저자 목록은 연구실 논문 목록([KIRC](https://kirc.kaist.ac.kr/publication_all.html))을 기준으로 작성했습니다.
+### 배너 · 일하는 방식 · 로고
 
-### 소개 페이지 상단 배너 (자동 슬라이드)
+- **배너**: `_data/en.yml`, `_data/ko.yml` 의 `banner` 목록 (순서 = 슬라이드 순서). 이미지는 `assets/img/banner/`, 넘김 간격은 `_config.yml` 의 `banner_interval`.
+  `link` 에는 `#publications` 같은 섹션 앵커나 외부 URL 을 넣습니다.
+- **일하는 방식**: `profile.how` (아이콘은 Font Awesome 이름).
+- **로고**: `assets/img/logos/` 에 넣고 `experience.items[].logo`, `education.items[].logo` 에 파일명을 적습니다.
+- **프로젝트 상세 링크**: `experience` 의 프로젝트 항목에 `detail: <파일명>` (예: `1_semiconductor_agent`), 프로젝트 리드 표시는 `lead: true`.
 
-- 슬라이드 내용: `_data/en-us/banner.yml`, `_data/ko/banner.yml` (순서대로 표시, 새 소식은 맨 위에 추가)
-  ```yaml
-  - image: neurips.svg            # assets/img/banner/ 의 이미지 (jpg/png/svg)
-    kicker: News · NeurIPS 2026   # 작은 라벨
-    title: 슬라이드 제목
-    text: 설명 문장
-    link: /publications/          # 선택. 내부 경로는 한국어 페이지에서 /ko/… 로 자동 연결
-    link_text: See publications
-  ```
-- 이미지: `assets/img/banner/` 의 SVG 일러스트는 사이트용으로 새로 그린 것입니다. 사진(가로 1200×450 권장, 왼쪽이 어두운 이미지)으로 바꿔도 됩니다.
-- 넘김 간격: `_config.yml` 의 `banner_interval` (ms). 배너를 끄려면 `about.md` 의 `banner: false`.
+### 자주 바꾸는 항목
 
-### 자주 하는 작업
-
-- **프로필 사진**: 사진을 `assets/img/prof_pic.jpg` 로 넣고 `_pages/*/about.md` 의 `profile.image` 에 `prof_pic.jpg` 를 적습니다.
-- **소식(news)**: `_news/en-us/`, `_news/ko/` 에 `2026-10-01-accepted.md` 형태로 글을 추가하고 `about.md` 의 `announcements.enabled` 를 `true` 로 바꿉니다.
+- **프로필 사진**: 정사각형 이미지를 `assets/images/` 에 넣고 `_data/common.yml` 의 `avatar` 에 파일명을 적습니다. 비워두면 이니셜(DH)이 표시됩니다.
+- **CV PDF 다운로드 버튼**: PDF 를 `assets/files/` 에 넣고 `common.yml` 의 `cv_pdf.en` / `cv_pdf.ko` 에 경로를 적습니다.
+- **피인용 수**: 자동 갱신되지 않으므로 `common.yml` 의 `citations` 를 가끔 직접 수정합니다.
+- **섹션 순서·메뉴**: `_config.yml` 의 `sections` 목록 순서가 헤더 메뉴와 본문 순서가 됩니다.
 
 ## 로컬 미리보기
 
-al-folio 기본 방식 (Docker 이미지 사용):
-
 ```bash
-docker compose pull
-docker compose up        # http://localhost:8080
+docker compose up        # http://localhost:4000 , http://localhost:4000/ko/
 ```
 
-또는 Ruby 공식 이미지로 한 번 빌드:
-
-```bash
-docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll -e BUNDLE_PATH=vendor/bundle ruby:3.3 \
-  sh -c "apt-get update -qq && apt-get install -y -qq imagemagick nodejs && bundle install && bundle exec jekyll build"
-```
+Ruby 개발 환경이 있다면 `bundle install && bundle exec jekyll serve` 로도 실행할 수 있습니다.
 
 ## 배포
 
-`master` 브랜치에 push 하면 `.github/workflows/deploy.yml` 이 빌드(ImageMagick, PurgeCSS 포함) 후 GitHub Pages 에 배포합니다.
-저장소 Settings → Pages → Source 는 **GitHub Actions** 로 설정되어 있어야 합니다.
+`master` 브랜치에 push 하면 GitHub Actions(`.github/workflows/pages.yml`)가 빌드 후 GitHub Pages 에 배포합니다.
 
-## License
+## 인쇄 / PDF
 
-al-folio / multi-language-al-folio 템플릿은 [MIT License](LICENSE) 를 따릅니다.
+브라우저 인쇄(Ctrl/Cmd + P) 또는 헤더의 인쇄 버튼으로 A4 CV 형태의 PDF 를 저장할 수 있습니다.
+인쇄 시에는 메뉴·필터가 숨겨지고, 논문은 필터와 관계없이 전부 출력됩니다.
+
+## 구조
+
+```
+_config.yml            사이트 설정 (URL, 언어, 섹션 순서)
+_data/                 콘텐츠 (YAML)
+_layouts/default.html  페이지 골격
+_includes/             헤더, 푸터, 섹션 템플릿 (sections/*.html)
+assets/css/main.css    스타일 (라이트/다크, 반응형, 인쇄)
+assets/js/main.js      다크 모드, 모바일 메뉴, 섹션 하이라이트, 논문 필터
+index.html, ko/        언어별 페이지 (내용 없이 언어만 지정)
+```

@@ -1,10 +1,11 @@
 ---
-page_id: project_5
-layout: page
-title: "자기주도적 학습을 위한 AI 기반 학습 추천 시스템 개발"
-description: "KAIST-KT 공동연구 프로젝트 · PM 및 모델 개발"
+layout: project
+lang: ko
+project_id: 5_learning_recommendation
+title: 자기주도적 학습을 위한 AI 기반 학습 추천 시스템 개발
+description: KAIST-KT 공동연구 프로젝트 · PM 및 모델 개발
 importance: 5
-category: work
+permalink: /ko/projects/5_learning_recommendation/
 ---
 
 - 프로젝트 PM 및 모델 개발 역할 수행

@@ -1,10 +1,11 @@
 ---
-page_id: project_2
-layout: page
-title: "LLM 기반 학습과정 시뮬레이션 기술 개발"
-description: "크레버스 산학 프로젝트 · AI Native 팀 프로젝트 리드 · 문항 분석 & 학생 시뮬레이션"
+layout: project
+lang: ko
+project_id: 2_learning_simulation
+title: LLM 기반 학습과정 시뮬레이션 기술 개발
+description: 크레버스 산학 프로젝트 · AI Native 팀 프로젝트 리드 · 문항 분석 & 학생 시뮬레이션
 importance: 2
-category: work
+permalink: /ko/projects/2_learning_simulation/
 ---
 
 **역할:** 학부 2학년 구성원들을 중심으로 한 팀의 프로젝트 리드 — 핵심 기술 방향과 평가 기준을 설계하고, 코드 리뷰와 실험 결과를 통해 빠르게 피드백하는 역할에 집중했습니다.

@@ -1,0 +1,12 @@
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <div class="footer-contact">
+      <h2 class="footer-title">{{ ui.contact_title }}</h2>
+      <p class="footer-text">{{ ui.contact_text }}</p>
+      {% include profile-links.html variant="footer" %}
+    </div>
+    <p class="footer-meta">
+      © {{ site.time | date: "%Y" }} {{ d.profile.name }} · {{ ui.updated }} {{ site.time | date: ui.date_format }}
+    </p>
+  </div>
+</footer>

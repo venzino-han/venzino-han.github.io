@@ -1,10 +1,11 @@
 ---
-page_id: project_1
-layout: page
-title: "반도체 검사장비를 위한 신뢰성 높은 On-Device AI 에이전트"
-description: "반도체 검사장비 기업 DeepSeers 공동 R&D · 프로젝트 리드 · 소형 언어모델의 Tool-calling 신뢰성"
+layout: project
+lang: ko
+project_id: 1_semiconductor_agent
+title: 반도체 검사장비를 위한 신뢰성 높은 On-Device AI 에이전트
+description: 반도체 검사장비 기업 DeepSeers 공동 R&D · 프로젝트 리드 · 소형 언어모델의 Tool-calling 신뢰성
 importance: 1
-category: work
+permalink: /ko/projects/1_semiconductor_agent/
 ---
 
 **역할:** 프로젝트 리드 — 문제 정의와 연구 방향 설정부터 Mock API Sandbox, 벤치마크 및 데이터 생성 파이프라인, 하네스 개발, Rollout 실험과 실패 분석까지 전 과정을 주도했습니다.

@@ -1,10 +1,11 @@
 ---
-page_id: project_3
-layout: page
-title: "언어모델을 활용한 강의 콘텐츠 추천 기술 개발"
-description: "천재교육 산학 프로젝트"
+layout: project
+lang: ko
+project_id: 3_content_recommendation
+title: 언어모델을 활용한 강의 콘텐츠 추천 기술 개발
+description: 천재교육 산학 프로젝트
 importance: 3
-category: work
+permalink: /ko/projects/3_content_recommendation/
 ---
 
 - LLM 기반 학습콘텐츠 추천기술 개발

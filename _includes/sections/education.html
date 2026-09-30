@@ -1,0 +1,28 @@
+{%- assign ed = d.education -%}
+{%- if ed -%}
+<section id="education" class="section section--alt" aria-labelledby="education-title">
+  <div class="container">
+    {% include sections/section-head.html id="education" title=ed.title lead=ed.lead %}
+
+    <ol class="edu-list">
+      {%- for item in ed.items %}
+      <li class="edu">
+        <p class="edu-period">{{ item.period }}</p>
+        <div class="edu-body">
+          {%- if item.logo %}
+          <span class="org-logo org-logo--edu"><img src="{{ '/assets/img/logos/' | append: item.logo | relative_url }}" alt="{{ item.school | default: item.title }} logo" loading="lazy"></span>
+          {%- endif %}
+          <h3 class="edu-title">{{ item.title }}{% if item.badge %} <span class="tag tag--accent">{{ item.badge }}</span>{% endif %}</h3>
+          {%- if item.school %}<p class="edu-school">{{ item.school }}</p>{% endif %}
+          {%- if item.details %}
+          <ul class="edu-details">
+            {%- for x in item.details %}<li>{{ x }}</li>{%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+{%- endif -%}

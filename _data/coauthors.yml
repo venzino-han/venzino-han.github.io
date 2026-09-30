@@ -1,5 +1,0 @@
-# 공저자 이름에 홈페이지 링크를 걸고 싶을 때 사용합니다 (키는 소문자 성).
-# 예)
-# "yi":
-#   - firstname: ["Mun Yong", "M. Y."]
-#     url: https://example.com

@@ -1,10 +1,11 @@
 ---
-page_id: project_6
-layout: page
-title: "타이어 하중 테스트 시뮬레이션을 위한 이미지 생성기술 개발"
-description: "한국타이어 산학 프로젝트 · CLIP·GAN 기반 이미지 생성"
+layout: project
+lang: ko
+project_id: 6_tire_image_generation
+title: 타이어 하중 테스트 시뮬레이션을 위한 이미지 생성기술 개발
+description: 한국타이어 산학 프로젝트 · CLIP·GAN 기반 이미지 생성
 importance: 6
-category: work
+permalink: /ko/projects/6_tire_image_generation/
 ---
 
 - 모델 설계 및 성능 분석 수행

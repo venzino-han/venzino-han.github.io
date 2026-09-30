@@ -1,10 +1,11 @@
 ---
-page_id: project_7
-layout: page
-title: "AI 기반 부동산 가치 분석시스템 개발"
-description: "프로젝트 PM · 데이터 분석 및 백엔드 개발"
+layout: project
+lang: ko
+project_id: 7_real_estate_valuation
+title: AI 기반 부동산 가치 분석시스템 개발
+description: 프로젝트 PM · 데이터 분석 및 백엔드 개발
 importance: 7
-category: work
+permalink: /ko/projects/7_real_estate_valuation/
 ---
 
 - 프로젝트 PM 및 데이터 분석·처리 시스템, 백엔드 개발 수행

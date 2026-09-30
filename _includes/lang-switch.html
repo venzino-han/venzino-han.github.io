@@ -1,0 +1,14 @@
+<div class="lang-switch" role="group" aria-label="Language">
+  {%- for l in site.languages -%}
+    {%- if l.code == lang -%}
+      <span class="lang-option is-active" aria-current="true" title="{{ l.name }}">{{ l.label }}</span>
+    {%- else -%}
+      {%- assign target_url = l.url | relative_url -%}
+      {%- if page.project_id -%}
+        {%- assign counterpart = site.projects | where: "lang", l.code | where: "project_id", page.project_id | first -%}
+        {%- if counterpart -%}{%- assign target_url = counterpart.url | relative_url -%}{%- endif -%}
+      {%- endif -%}
+      <a class="lang-option" href="{{ target_url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" title="{{ l.name }}">{{ l.label }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

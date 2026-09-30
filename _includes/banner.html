@@ -1,0 +1,31 @@
+{%- comment -%}
+  자동 슬라이드 배너. 슬라이드: _data/<lang>.yml 의 banner, 이미지: assets/img/banner/
+  넘김 간격: _config.yml 의 banner_interval (ms)
+{%- endcomment -%}
+{%- assign slides = d.banner -%}
+{%- if slides and slides.size > 0 -%}
+<div class="banner" id="highlights" data-interval="{{ site.banner_interval | default: 6000 }}" aria-roledescription="carousel" aria-label="{{ ui.highlights }}">
+  <div class="banner-track">
+    {%- for s in slides %}
+    <div class="banner-slide{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ slides.size }}"{% unless forloop.first %} aria-hidden="true"{% endunless %}>
+      <img class="banner-image" src="{{ '/assets/img/banner/' | append: s.image | relative_url }}" alt="" loading="eager" decoding="async">
+      <div class="banner-caption">
+        {%- if s.kicker %}<p class="banner-kicker">{{ s.kicker }}</p>{% endif %}
+        <h2 class="banner-title">{{ s.title }}</h2>
+        {%- if s.text %}<p class="banner-text">{{ s.text }}</p>{% endif %}
+        {%- if s.link %}
+        <a class="banner-link" href="{{ s.link }}"{% if s.link contains '://' %} target="_blank" rel="noopener"{% endif %}{% unless forloop.first %} tabindex="-1"{% endunless %}>{{ s.link_text }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {%- endif %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  <div class="banner-dots">
+    {%- for s in slides %}
+    <button type="button" class="banner-dot{% if forloop.first %} is-active{% endif %}" data-slide="{{ forloop.index0 }}" aria-label="{{ forloop.index }} / {{ slides.size }}"{% if forloop.first %} aria-current="true"{% endif %}></button>
+    {%- endfor %}
+  </div>
+  <button type="button" class="banner-nav banner-prev" aria-label="Previous slide"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+  <button type="button" class="banner-nav banner-next" aria-label="Next slide"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+</div>
+{%- endif -%}

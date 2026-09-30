@@ -1,0 +1,30 @@
+---
+---
+{% include init.html %}<!DOCTYPE html>
+<html lang="{{ lang }}">
+{% include head.html %}
+<body class="lang-{{ lang }} page-project">
+  <a class="skip-link" href="#main">{{ ui.skip }}</a>
+  {% include header.html %}
+
+  <main id="main" class="project-page">
+    <div class="container container--narrow">
+      <a class="back-link" href="{{ home_url }}#experience"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ ui.back }}</a>
+      <header class="project-page-head">
+        <h1 class="project-page-title">{{ page.title }}</h1>
+        {%- if page.description %}
+        <p class="project-page-desc">{{ page.description }}</p>
+        {%- endif %}
+      </header>
+      <article class="prose project-body">
+        {{ content }}
+      </article>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  {% if site.analytics %}{% include analytics.html %}{% endif %}
+</body>
+</html>

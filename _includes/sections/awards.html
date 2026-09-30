@@ -1,0 +1,27 @@
+{%- assign aw = d.awards -%}
+{%- if aw -%}
+<section id="awards" class="section" aria-labelledby="awards-title">
+  <div class="container">
+    {% include sections/section-head.html id="awards" title=aw.title lead=aw.lead %}
+
+    <div class="award-grid">
+      {%- for item in aw.items %}
+      <article class="award">
+        <div class="award-top">
+          <span class="award-icon" aria-hidden="true"><i class="fas fa-trophy"></i></span>
+          <p class="award-date">{{ item.date }}</p>
+        </div>
+        <h3 class="award-title">{{ item.title }}</h3>
+        {%- if item.event %}<p class="award-event">{{ item.event }}</p>{% endif %}
+        {%- if item.summary %}<p class="award-summary">{{ item.summary }}</p>{% endif %}
+        {%- if item.bullets %}
+        <ul class="bullets">
+          {%- for b in item.bullets %}<li>{{ b }}</li>{%- endfor %}
+        </ul>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif -%}

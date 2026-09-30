@@ -1,0 +1,69 @@
+{%- assign p = d.profile -%}
+{%- assign n_total = pubs | size -%}
+{%- assign n_journal = pubs | where: "type", "journal" | size -%}
+{%- assign n_first = pubs | where: "role", "first" | size -%}
+{%- assign n_cofirst = pubs | where: "role", "co-first" | size -%}
+{%- assign n_first = n_first | plus: n_cofirst -%}
+<section id="about" class="hero" aria-labelledby="about-title">
+  <div class="container">
+    {% include banner.html %}
+
+    <div class="hero-grid">
+      <div class="hero-portrait">
+        {%- if c.avatar %}
+        <img class="avatar" src="{{ '/assets/images/' | append: c.avatar | relative_url }}" alt="{{ p.name }}" width="184" height="184">
+        {%- else %}
+        <div class="avatar avatar--monogram" aria-hidden="true"><span>{{ c.initials }}</span></div>
+        {%- endif %}
+      </div>
+
+      <div class="hero-body">
+        <p class="eyebrow">{{ p.affiliation }}</p>
+        <h1 class="hero-name" id="about-title">
+          {{ p.name }}{% if p.name_alt %} <span class="hero-name-alt" lang="{% if lang == 'ko' %}en{% else %}ko{% endif %}">{{ p.name_alt }}</span>{% endif %}
+        </h1>
+        <p class="hero-role">{{ p.role }}</p>
+        <div class="hero-bio prose">{{ p.bio | markdownify }}</div>
+        {% include profile-links.html variant="hero" %}
+      </div>
+    </div>
+
+    <div class="hero-footer">
+      {%- if p.interests %}
+      <div class="interests">
+        <h2 class="mini-title">{{ p.interests_title }}</h2>
+        <ul class="chips">
+          {%- for item in p.interests %}<li class="chip">{{ item }}</li>{%- endfor %}
+        </ul>
+      </div>
+      {%- endif %}
+
+      <dl class="stats">
+        <div class="stat"><dt>{{ ui.stats.publications }}</dt><dd>{{ n_total }}</dd></div>
+        <div class="stat"><dt>{{ ui.stats.first }}</dt><dd>{{ n_first }}</dd></div>
+        <div class="stat"><dt>{{ ui.stats.journals }}</dt><dd>{{ n_journal }}</dd></div>
+        {%- if c.citations %}
+        <div class="stat">
+          <dt>{% if c.scholar %}<a href="https://scholar.google.com/citations?user={{ c.scholar }}" target="_blank" rel="noopener">{{ ui.stats.citations }}</a>{% else %}{{ ui.stats.citations }}{% endif %}</dt>
+          <dd>{{ c.citations }}</dd>
+        </div>
+        {%- endif %}
+      </dl>
+    </div>
+
+    {%- if p.how %}
+    <div class="how" id="how-i-work">
+      <h2 class="mini-title">{{ p.how_title }}</h2>
+      <div class="how-grid">
+        {%- for h in p.how %}
+        <article class="how-card">
+          <div class="how-icon" aria-hidden="true"><i class="fas fa-{{ h.icon | default: 'check' }}"></i></div>
+          <h3 class="how-title">{{ h.title }}</h3>
+          <p class="how-text">{{ h.text }}</p>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+</section>

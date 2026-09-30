@@ -1,0 +1,56 @@
+{%- assign ex = d.experience -%}
+{%- if ex -%}
+<section id="experience" class="section" aria-labelledby="experience-title">
+  <div class="container">
+    {% include sections/section-head.html id="experience" title=ex.title lead=ex.lead %}
+
+    <ol class="timeline">
+      {%- for job in ex.items %}
+      <li class="timeline-item{% if job.current %} is-current{% endif %}">
+        <div class="timeline-head">
+          <div class="timeline-title">
+            {%- if job.logo %}
+            <span class="org-logo"><img src="{{ '/assets/img/logos/' | append: job.logo | relative_url }}" alt="{{ job.org }} logo" loading="lazy"></span>
+            {%- endif %}
+            <div>
+              <h3 class="timeline-org">{{ job.org }}</h3>
+              <p class="timeline-role">{{ job.role }}</p>
+            </div>
+          </div>
+          <p class="timeline-period">{{ job.period }}</p>
+        </div>
+        {%- if job.summary %}
+        <p class="timeline-summary">{{ job.summary }}</p>
+        {%- endif %}
+        {%- if job.projects %}
+        <div class="project-grid{% if job.projects.size == 1 %} project-grid--single{% endif %}">
+          {%- for project in job.projects %}
+          <article class="project">
+            <div class="project-head">
+              <h4 class="project-title">{{ project.title }}</h4>
+              <div class="project-tags">
+                {%- if project.lead %}<span class="tag tag--lead">{{ ui.lead }}</span>{% endif %}
+                {%- if project.client %}<span class="tag tag--client">{{ project.client }}</span>{% endif %}
+              </div>
+            </div>
+            {%- if project.bullets %}
+            <ul class="bullets">
+              {%- for b in project.bullets %}<li>{{ b }}</li>{%- endfor %}
+            </ul>
+            {%- endif %}
+            {%- if project.detail %}
+            {%- assign detail_doc = site.projects | where: "lang", lang | where: "project_id", project.detail | first %}
+            {%- if detail_doc %}
+            <a class="project-more" href="{{ detail_doc.url | relative_url }}">{{ ui.details }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            {%- endif %}
+            {%- endif %}
+          </article>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+{%- endif -%}

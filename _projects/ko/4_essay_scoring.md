@@ -1,10 +1,11 @@
 ---
-page_id: project_4
-layout: page
-title: "언어모델을 활용한 에세이 평가 기술 개발"
-description: "KAIST-KT 공동연구 프로젝트 · PM 및 모델 개발"
+layout: project
+lang: ko
+project_id: 4_essay_scoring
+title: 언어모델을 활용한 에세이 평가 기술 개발
+description: KAIST-KT 공동연구 프로젝트 · PM 및 모델 개발
 importance: 4
-category: work
+permalink: /ko/projects/4_essay_scoring/
 ---
 
 - 프로젝트 PM 및 모델 개발 역할 수행
