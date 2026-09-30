@@ -1,0 +1,52 @@
+# Auto-rotating banner at the top of the About page (edit freely; order = slide order)
+#   image: file in assets/img/banner/   kicker: small label   title / text: slide text
+#   link / link_text: optional button (internal paths like /publications/ work in both languages)
+
+- image: neurips.svg
+  kicker: News · NeurIPS 2026
+  title: Two first-author papers accepted to NeurIPS 2026
+  text: "PRISMIC — reconstructing user preference via intent decomposition and consolidation — and Selective Answering for Medical VQA via parallel independent claim verification."
+  link: /publications/
+  link_text: See publications
+
+- image: emnlp-cikm.svg
+  kicker: News · EMNLP 2026 & CIKM 2026
+  title: Six papers at EMNLP 2026 and CIKM 2026
+  text: Three EMNLP 2026 papers (two main, one Findings) and three first-author CIKM 2026 papers, including an oral presentation on catalog-to-supervision training for recommendation with LLM-simulated preferences.
+  link: /publications/
+  link_text: See publications
+
+- image: strengths.svg
+  kicker: How I work
+  title: Structure the problem, then see it through
+  text: I design what to train and how to verify it, turn failures into testable hypotheses, and build tools that let teams and clients check results fast — with the stamina and humor that long, demanding projects need.
+  link: /#how-i-work
+  link_text: How I work
+
+- image: publications.svg
+  kicker: Achievement
+  title: 29 publications, 16 as first author
+  text: NeurIPS · EMNLP · ACL · CIKM · SIGIR · CVPR · MICCAI and 4 SCIE journals, with 120+ citations on Google Scholar.
+  link: https://scholar.google.com/citations?user=M81V1F4AAAAJ
+  link_text: Google Scholar
+
+- image: research.svg
+  kicker: Research
+  title: LLMs, recommendation & reliable AI agents
+  text: Efficient LLM-based recommenders with GRPO, reasoning distillation, and simulation-based data curation — and reliable, safe AI agents with routing, verification-aware stopping, and robust tool calling.
+  link: /publications/
+  link_text: Research papers
+
+- image: industry.svg
+  kicker: Industry R&D · Project lead
+  title: Reliable on-device AI agents for semiconductor equipment
+  text: A Mock-API sandbox and LLM-expanded benchmark, a harness that separates planning from execution, and consistency-based selection over multiple rollouts — making a small on-device model call tools reliably without larger models.
+  link: /projects/
+  link_text: See projects
+
+- image: awards.svg
+  kicker: Awards
+  title: Four AI hackathon awards
+  text: Grand Prizes at the AI Education Hackathon (2023) and SKT AI Hackathon (2017), Creativity Award at the K-DS Conference Hackathon (2023), and Excellence Award at Pangyo AI CAMP (2021).
+  link: /cv/
+  link_text: See CV

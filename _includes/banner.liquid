@@ -1,0 +1,63 @@
+{% comment %}
+  Auto-rotating highlights banner (Bootstrap 4 carousel).
+  Slides: _data/<lang>/banner.yml, images: assets/img/banner/
+{% endcomment %}
+{% assign slides = site.data[site.active_lang].banner %}
+{% if slides and slides.size > 0 %}
+  <div
+    id="highlights"
+    class="carousel slide banner"
+    data-ride="carousel"
+    data-interval="{{ site.banner_interval | default: 6000 }}"
+    data-pause="hover"
+    aria-roledescription="carousel"
+  >
+    <ol class="carousel-indicators">
+      {% for s in slides %}
+        <li data-target="#highlights" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+      {% for s in slides %}
+        <div class="carousel-item{% if forloop.first %} active{% endif %}" aria-roledescription="slide">
+          <div class="banner-slide">
+            <img
+              class="banner-image"
+              src="{{ s.image | prepend: '/assets/img/banner/' | relative_url }}"
+              alt="{{ s.alt | default: s.title | escape }}"
+              loading="eager"
+            >
+            <div class="banner-caption">
+              {% if s.kicker %}<p class="banner-kicker">{{ s.kicker }}</p>{% endif %}
+              <h2 class="banner-title">{{ s.title }}</h2>
+              {% if s.text %}<p class="banner-text">{{ s.text }}</p>{% endif %}
+              {% if s.link %}
+                {% if s.link contains '://' %}
+                  <a class="banner-link" href="{{ s.link }}" target="_blank" rel="noopener noreferrer">{{ s.link_text | default: 'More' }} &rarr;</a>
+                {% else %}
+                  <a class="banner-link" href="{{ s.link | relative_url }}">{{ s.link_text | default: 'More' }} &rarr;</a>
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#highlights" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#highlights" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <script>
+    // 움직임 줄이기 설정을 켠 사용자에게는 자동 넘김을 멈춤
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.jQuery) {
+        window.jQuery('#highlights').carousel('pause');
+      }
+    });
+  </script>
+{% endif %}

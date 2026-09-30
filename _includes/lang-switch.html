@@ -1,9 +1,0 @@
-<div class="lang-switch" role="group" aria-label="Language">
-  {%- for l in site.languages -%}
-    {%- if l.code == lang -%}
-      <span class="lang-option is-active" aria-current="true" title="{{ l.name }}">{{ l.label }}</span>
-    {%- else -%}
-      <a class="lang-option" href="{{ l.url | relative_url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" title="{{ l.name }}">{{ l.label }}</a>
-    {%- endif -%}
-  {%- endfor -%}
-</div>

@@ -1,5 +1,0 @@
-{%- comment -%} 저자 목록 출력. common.yml 의 self_names 를 굵게 표시 {%- endcomment -%}
-{%- for a in include.authors -%}
-  {%- if c.self_names contains a -%}<strong class="me">{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
-  {%- unless forloop.last %}, {% endunless -%}
-{%- endfor -%}

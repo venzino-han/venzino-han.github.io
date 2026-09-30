@@ -1,11 +1,18 @@
-_site/
-.sass-cache/
-.jekyll-metadata
+_site
+.bundle
+.sass-cache
 .jekyll-cache
-.bundle/
-vendor/
-graft/
+.jekyll-metadata
+.DS_store
+.ruby-version
+.tweet-cache
+assets/libs/
+node_modules/
+vendor
+.idea
+.venv
 
-# 비밀 정보
+# local tools / secrets
+graft/
 github_token.txt
 *.token

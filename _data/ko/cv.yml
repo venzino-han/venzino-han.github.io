@@ -1,0 +1,208 @@
+# CV 페이지 (한국어) — /ko/cv/ 에 표시
+# 섹션 type: map | time_table | nested_list | list
+# 영문은 _data/en-us/cv.yml 이며 구조가 같습니다.
+
+- title: 기본 정보
+  type: map
+  contents:
+    - name: 이름
+      value: 한동희 (Donghee Han)
+    - name: 소속
+      value: KAIST 데이터사이언스대학원 박사과정 (2027.02 졸업예정)
+    - name: 연구실
+      value: KAIST Knowledge System Lab
+    - name: 이메일
+      value: venzino.han@gmail.com
+
+- title: 연구 및 기술 역량
+  type: nested_list
+  contents:
+    - title: AI Research & Machine Learning Engineering
+      items:
+        - "국제우수학회 및 SCIE 저널 연구 성과: NeurIPS, EMNLP, ACL, CIKM, SIGIR, CVPR, MICCAI 등 학술대회 및 저널에 총 29편 연구 성과 발표 (SCIE 4편, 국제학술대회 25편 / 1저자 16편)"
+        - "LLM-based Recommendation System: 강화학습(GRPO), LLM 추론 능력 증류, 시뮬레이션 데이터 큐레이션 등 고성능·고효율 LLM 기반 추천 아키텍처 연구 및 개발"
+        - "Agentic AI & Advanced RAG: 에이전트 라우팅, 검증 기반 조기 중단 메커니즘, Text-to-SQL, 답변 신뢰성 강화 등 복합 추론 및 검색 증강 생성 파이프라인 설계"
+        - "Graph Neural Networks & Multimodal/Medical AI: GNN 기반 추천 및 지식추적, 이미지 기반 의료 진단 및 멀티모달 생성 모델 연구"
+        - "산학 R&D & Semiconductor AI: 반도체 검사장비 기업 DeepSeers와 AI 에이전트·비전검사 공동연구 수행. KT, 한국타이어, 천재교육, 크레버스 등 산학 프로젝트에서 PM·핵심 모듈 개발 및 PoC/상용화 주도"
+    - title: Data & Software Engineering
+      items:
+        - "대규모 분산 데이터 파이프라인 구축: 광고 빅데이터 플랫폼 데이터 엔지니어링. AWS, Kubernetes, Airflow 기반 실시간/배치 데이터 수집·가공 파이프라인 구축 및 운영, 데이터 품질 관리 및 데이터 카탈로그 구축"
+        - "ML Serving & 백엔드 개발: FastAPI, Docker, MySQL 기반의 경량화 모델 추론 서빙 및 백엔드 시스템 개발"
+        - "클라우드 인프라 & DevOps: Terraform을 활용한 IaC, CI/CD 자동화"
+        - "AI 인프라 및 GPU 환경 최적화: Multi-GPU 서버/워크스테이션 환경 구축, 리눅스 시스템 관리 및 최신 개발 도구를 활용한 엔지니어링 생산성 극대화"
+    - title: 일하는 방식
+      items:
+        - "복잡한 문제를 구조화하고, 끝까지 실행하여 결과로 만드는 능력"
+        - "무엇을 학습시키고 어떻게 검증할지 설계: 데이터 구축, 샌드박스, 벤치마크, 평가 체계를 하나의 시스템으로 연결"
+        - "실패 중심 분석: 데이터를 분해하고 실패 사례를 유형화하여 검증 가능한 가설로 전환"
+        - "AI Native 협업: 독립적으로 검증 가능한 업무 단위와, 팀원·고객이 결과를 빠르게 확인할 수 있는 도구 설계"
+        - "장기간 고강도 업무를 꾸준히 유지하는 체력과, 팀 분위기를 긍정적이고 솔직하게 만드는 유머"
+
+- title: 연구 경력
+  type: time_table
+  contents:
+    - title: Researcher
+      institution: KAIST Knowledge System Lab
+      logo: kaist.svg
+      year: 2022.03 – 현재
+      description:
+        - title: "반도체 검사장비 기업 공동 R&D: AI 에이전트 및 비전검사 기술 [DeepSeers] — 프로젝트 리드"
+          contents:
+            - 네트워크·외부 대형 모델 사용이 어려운 장비 환경에서 On-Device 소형 언어모델(SLM) 에이전트의 Tool-calling 안정성과 실행 신뢰성을 높이는 프로젝트 리드
+            - 실제 장비 인터페이스를 모사한 Mock API Sandbox와, 사람이 정의한 seed 시나리오를 LLM으로 확장한 벤치마크를 구축해 실제 장비 없이 대규모 Tool-calling 실험·실패 분석 수행
+            - 실패 분석으로 도구 조합 순서를 결정하는 계획(Planning) 단계가 핵심 병목임을 확인하고, 도구·장비 정보 검색 기반 계획과 실행을 분리한 하네스 설계
+            - 실행 결과 검증과 다중 독립 Rollout의 일관성 기반 선택 구조를 결합해, 대형 모델 의존 없이 SLM의 Tool-calling 성능과 안정성을 크게 향상
+            - 장비 지식 RAG 및 검증 기반 AI 에이전트 답변 신뢰도 강화 연구
+            - 사전학습 비전모델(VLM, SAM3 등)을 활용한 zero-shot 불량 유형 분류 연구
+        - title: LLM 기반 학습과정 시뮬레이션 기술 개발 [크레버스] — 프로젝트 리드
+          contents:
+            - 학부 2학년 구성원 중심의 'AI Native' 팀을 운영하며 데이터 구축·모델 개발·실험/평가를 독립적으로 검증 가능한 단위로 분담
+            - LLM 기반 문항 분석 기술 개발
+            - LLM 기반 학생 시뮬레이션 기술 개발
+            - 데이터·모델 출력·시뮬레이션·평가 결과를 직접 탐색하는 웹 기반 시각화·검증 도구를 구축해 고객사 검증 시간과 커뮤니케이션 비용 절감
+        - title: 언어모델을 활용한 강의 콘텐츠 추천 기술 개발 [천재교육]
+          contents:
+            - LLM 기반 학습콘텐츠 추천기술 개발
+            - 강의 영상 요약 기반 학습주제 및 활동 DB 구축
+            - KoBERT, Qwen-Reranker 기반 시맨틱 추천 시스템 구축
+        - title: 언어모델을 활용한 에세이 평가 기술 개발 [KAIST-KT 공동연구 프로젝트]
+          contents:
+            - 프로젝트 PM 및 모델 개발 역할 수행
+            - 생성형 언어모델을 활용한 다중 지표 에세이 평가 모델 개발
+            - 기존 SOTA 에세이평가 모델 대비 높은 성능 달성 및 메모리/추론속도 효율성 향상
+            - 새로운 제시문 에세이가 주어지는 경우에도 평가 가능한 높은 일반화 성능 달성
+            - 경량화 에세이 평가 모델 개발 및 경기도교육청 PoC 수행
+        - title: 자기주도적 학습을 위한 AI 기반 학습 추천 시스템 개발 [KAIST-KT 공동연구 프로젝트]
+          contents:
+            - 프로젝트 PM 및 모델 개발 역할 수행
+            - 그래프신경망(GNN) 기반 지식추적 기술 개발
+            - 그래프신경망과 자연어처리 기술을 통합한 추천 알고리즘 개발
+            - 진로 추천을 위한 지식그래프 구축 기술 개발
+        - title: AI 기반 부동산 가치 분석시스템 개발
+          contents:
+            - 프로젝트 PM 및 데이터 분석·처리 시스템, 백엔드 개발 수행
+            - 데이터를 기반으로 부동산 가치분석을 수행하는 알고리즘 및 웹 어플리케이션 개발
+            - 뉴스, 상권 등 부동산 관련 데이터 수집 및 전처리 모듈 개발
+            - KeyBERT 기반 키워드 분석 및 OpenAI API를 활용한 관련 뉴스 호재 분석 기능 개발
+            - 웹 어플리케이션 백엔드 개발 (Docker, FastAPI, MySQL)
+        - title: 타이어 하중 테스트 시뮬레이션을 위한 이미지 생성기술 개발 [한국타이어]
+          contents:
+            - 모델 설계 및 성능 분석 수행
+            - 타이어 하중 테스트 시 촬영되는 풋프린트 이미지를 대체하기 위한 이미지 생성 기술 개발
+            - CLIP, GAN 모델을 응용하여 타이어 하중 테스트 변수를 입력하면 실험 조건에 부합하는 이미지를 생성
+            - 기존 알고리즘 대비 향상된 성능 달성, 테스트에 들어가는 비용을 획기적으로 절약
+
+- title: 실무 경력
+  type: time_table
+  contents:
+    - title: Data Engineer
+      institution: Buzzvil
+      logo: buzzvil.svg
+      year: 2020.12 – 2022.02
+      description:
+        - title: 광고 빅데이터 분석 플랫폼 및 데이터 파이프라인 개발
+          contents:
+            - AWS 기반 데이터레이크, 데이터웨어하우스, 데이터마트 구축 및 운영
+            - Airflow 기반의 데이터 파이프라인을 Kubernetes 기반으로 운영하며 신규기능 개발 및 유지보수
+            - Jenkins 기반의 배치 프로세스들을 Airflow 기반의 파이프라인으로 통합하여 운영 효율화
+            - SK planet 광고 플랫폼 자체 운영을 위한 데이터 플랫폼 구축
+            - 데이터 탐색 플랫폼(Amundsen) 도입 및 Tableau, Redash 대시보드 데이터 연동 파이프라인 개발
+            - 광고 소진량 예측 알고리즘 개발 및 PoC 진행
+            - 데이터 품질 관리 도구(Great Expectations) PoC 진행
+    - title: Researcher
+      institution: Tmax A&C
+      logo: tmax-anc.png
+      year: 2018.08 – 2020.07
+      description:
+        - title: 데이터 통합 분석 플랫폼 연구/개발
+          contents:
+            - 데이터 전처리 및 시각화 모듈 기획/설계
+            - 데이터 탐색 및 파이프라인 구축 모듈 기획/설계
+            - AutoML 모듈 설계 및 PoC 진행
+            - 자연어 기반 데이터 분석 모듈 설계 및 PoC 진행
+        - title: CRM/ERP 통합 플랫폼 연구/개발
+          contents:
+            - 초기 제품 기능 기획 및 설계 진행
+            - AICC 관련 기능 기획 및 설계
+    - title: Associate
+      institution: LG Hausys
+      logo: lg-hausys.svg
+      year: 2016.01 – 2018.07
+      description:
+        - title: 신디자인 매출 데이터 분석 및 해외 시장 전략수립
+          contents:
+            - 해외 디자인 트렌드 데이터 수집 프로세스 구축
+            - 데이터 기반 자사 매출 및 고객사 디자인 트렌드 분석
+            - 데이터 기반 신제품 개발 방향 수립
+
+- title: 학력
+  type: time_table
+  contents:
+    - title: 박사 (졸업예정)
+      institution: KAIST 데이터사이언스대학원 (산업및시스템공학과)
+      logo: kaist.svg
+      year: 2023.09 – 2027.02
+      description:
+        - "연구분야: LLM, 추천시스템, 자연어처리"
+    - title: 석사
+      institution: KAIST 데이터사이언스대학원 (산업및시스템공학과)
+      logo: kaist.svg
+      year: 2022.03 – 2023.08
+      description:
+        - "연구분야: 추천시스템, 자연어처리"
+        - 3학기 조기졸업 (GPA 3.85/4.3)
+    - title: 학사 · 산업디자인학과 (기술경영 부전공)
+      institution: KAIST
+      logo: kaist.svg
+      year: 2009.02 – 2016.02
+      description:
+        - "연구분야: 피지컬 컴퓨팅"
+    - title: 강원과학고등학교
+      year: 2007.03 – 2009.02
+      logo: kangwon-science-hs.png
+      description:
+        - 2년 조기졸업
+
+- title: 논문
+  type: list
+  contents:
+    - 총 29편 — 국제학술대회 25편, SCIE 저널 4편 (제1저자 16편). 전체 목록은 <a href="/publications/">논문</a> 페이지를 참고하세요.
+
+- title: 수상
+  type: time_table
+  contents:
+    - title: K-DS 컨퍼런스 해커톤 창의상
+      institution: K-DS 컨소시엄
+      year: 2023.11
+      description:
+        - KoAlpaca 기반 자체 LLM 서비스 개발 (대화형 한국사 학습도구)
+        - PEFT(Q-LoRA) 기법을 활용하여 한국사 관련 데이터 학습
+        - Key-Value 기반의 핵심용어 중심 RAG 구현 (ChromaDB & FastAPI)
+    - title: AI 에듀 해커톤 최우수상
+      year: 2023.08
+      description:
+        - OpenAI API(GPT-3.5)를 활용한 논술형 문항 생성 및 채점 어플리케이션 개발
+        - 기존 출제 문항 및 전공 관련 지식을 RAG로 활용하여 새로운 문항 생성
+        - 모범답안과 관련 지식을 바탕으로 서술형 답안 채점 및 학습자 기록 기반 합격확률 예측
+        - LangChain을 활용하여 VectorDB(Chroma)와 GPT-3.5를 통합, In-context learning 구현
+    - title: 판교 AI CAMP 자연어처리 부문 우수상
+      year: 2021.09
+      description:
+        - BERT 기반 소상공인 QnA 대화 분류 모델 개발 (3위)
+        - 질문과 답변 텍스트로 구성된 대화 데이터(375K)를 118개의 카테고리로 분류
+        - 데이터 증강기법 및 모델 앙상블을 통한 성능 향상
+        - 소수 클래스 데이터에 대해 대화의 일부만을 사용하는 방식으로 데이터 불균형 문제 해결
+    - title: SKT AI 해커톤 최우수상
+      year: 2017.08
+      description:
+        - NVIDIA Jetson board를 활용한 스마트 미러 개발
+        - 표정 인식 모델 학습 및 표정에 따른 적절한 콘텐츠를 제공하는 어플리케이션 개발
+
+- title: 기술 스택
+  type: list
+  contents:
+    - "<b>LLM · NLP:</b> GRPO, RAG, LangChain, ChromaDB, PEFT (Q-LoRA), OpenAI API, BERT, KoBERT, KeyBERT, Qwen-Reranker"
+    - "<b>비전 · 멀티모달:</b> VLM, SAM3, CLIP, GAN"
+    - "<b>그래프 ML:</b> GNN, 지식그래프, 지식추적"
+    - "<b>데이터 엔지니어링:</b> AWS, Kubernetes, Airflow, Great Expectations, Amundsen, Tableau, Redash, Jenkins"
+    - "<b>백엔드 · DevOps:</b> FastAPI, Docker, MySQL, Terraform, CI/CD, Linux"
