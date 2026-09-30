@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post" id="about">
   {% if page.banner %}
     {% include banner.liquid %}
   {% endif %}
@@ -43,6 +43,10 @@ layout: default
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
+
+    {% if page.home_sections %}
+      {% include home_sections.liquid %}
+    {% endif %}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}

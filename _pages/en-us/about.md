@@ -15,7 +15,8 @@ profile:
     <p>venzino.han [at] gmail.com</p>
 
 banner: true # auto-rotating highlights banner (_data/<lang>/banner.yml)
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # full publication list is shown in the Publications section
+home_sections: true # one-page home: Research, Publications, Experience, Education, Awards (see _config.yml)
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -35,13 +36,6 @@ My research spans **LLMs, recommender systems, and the reliability and safety of
 
 Alongside research, I have led industry–academia projects that turn research ideas into systems that work on real data and in real environments — for example, making an on-device small language model agent call tools reliably for semiconductor inspection equipment.
 Before graduate school, I worked in industry on data engineering, analytics-platform R&D, and data-driven market analysis at Buzzvil, Tmax A&C, and LG Hausys.
-
-#### Research
-
-- **LLM-based Recommendation** — efficient LLM-based recommenders with reinforcement learning (GRPO), LLM reasoning distillation, and simulation-based data curation
-- **Agentic AI, Reliability & Safety** — reliable tool calling for on-device agents, agent routing, verification-aware early stopping, Text-to-SQL, and retrieval-augmented generation
-- **Graph Neural Networks & Multimodal / Medical AI** — GNN-based recommendation and knowledge tracing, medical image diagnosis, multimodal generation
-- **Industry R&D** — AI agents and vision inspection with DeepSeers (semiconductor), and projects with KT, Hankook Tire, Chunjae Education, and Creverse
 
 #### How I work {#how-i-work}
 

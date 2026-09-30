@@ -194,3 +194,50 @@ html[lang="ko"] .banner .banner-kicker {
     max-width: 104px;
   }
 }
+
+// ---------------------------------------------------------------------------
+// One-page home: section headings, anchor offsets, navbar highlight
+// ---------------------------------------------------------------------------
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+#about,
+#how-i-work,
+.home-section {
+  scroll-margin-top: 72px; // fixed navbar
+}
+
+.home-section {
+  padding-top: 2.5rem;
+  margin-top: 1rem;
+
+  .home-section-title {
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .home-section-desc {
+    margin: 0.75rem 0 0.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+  }
+
+  .cv .card:first-child {
+    margin-top: 1rem !important;
+  }
+}
+
+// scrollspy marks the section link that is currently in view
+.navbar .navbar-nav .nav-link.active {
+  color: var(--global-theme-color) !important;
+}

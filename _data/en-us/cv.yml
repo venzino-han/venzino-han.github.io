@@ -1,27 +1,16 @@
-# CV page (English) — rendered at /cv/
-# Section types: map | time_table | nested_list | list
+# CV data (English) — shown on the one-page home (/) in the Research, Experience, Education and Awards sections
+# section: research | experience | education | awards  (which home section shows the entry)
+# type: map | time_table | nested_list | list
 # The Korean version lives in _data/ko/cv.yml with the same structure.
 
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Donghee Han (한동희)
-    - name: Position
-      value: Ph.D. Candidate, KAIST Graduate School of Data Science (expected Feb. 2027)
-    - name: Lab
-      value: Knowledge System Lab, KAIST
-    - name: Email
-      value: venzino.han@gmail.com
-
-- title: Research & Engineering Summary
+- section: research
   type: nested_list
   contents:
     - title: AI Research & Machine Learning Engineering
       items:
         - "Research publications in top-tier conferences & SCIE journals: 29 publications at venues including NeurIPS, EMNLP, ACL, CIKM, SIGIR, CVPR, and MICCAI (4 SCIE journal papers, 25 international conference papers / 16 first-author papers)"
         - "LLM-based recommendation systems: high-performance, efficient LLM-based recommendation architectures using reinforcement learning (GRPO), LLM reasoning distillation, and simulation-based data curation"
-        - "Agentic AI & advanced RAG: complex reasoning and retrieval-augmented generation pipelines, including agent routing, verification-aware early stopping, Text-to-SQL, and reliability enhancement"
+        - "Agentic AI & advanced RAG: complex reasoning and retrieval-augmented generation pipelines, including agent routing, verification-aware early stopping, Text-to-SQL, and reliable tool calling for on-device agents"
         - "Graph neural networks & multimodal/medical AI: GNN-based recommendation and knowledge tracing, image-based medical diagnosis, and multimodal generative models"
         - "Industry R&D & semiconductor AI: joint research with semiconductor inspection equipment company DeepSeers on AI agents and vision inspection; led PM, core-module development, PoC, and commercialization efforts with KT, Hankook Tire, Chunjae Education, and Creverse"
     - title: Data & Software Engineering
@@ -30,15 +19,19 @@
         - "ML serving & backend development: lightweight model inference services and backend systems using FastAPI, Docker, and MySQL"
         - "Cloud infrastructure & DevOps: infrastructure as code (IaC) with Terraform and CI/CD automation"
         - "AI infrastructure & GPU optimization: multi-GPU servers/workstations, Linux system administration, and engineering productivity with modern AI development tools"
-    - title: Working Style
-      items:
-        - "Structuring complex problems and executing them through to results"
-        - "Designing what to train and how to verify it: data, sandboxes, benchmarks, and evaluation as one system"
-        - "Failure-driven analysis: decomposing data, categorizing failure cases, and turning them into verifiable hypotheses"
-        - "AI-native collaboration: independently verifiable work units, and tools that let teams and clients verify results quickly"
-        - "Stamina for sustained high-intensity work, and humor that keeps teams positive and candid"
+
+- title: Skills
+  section: research
+  type: list
+  contents:
+    - "<b>LLM & NLP:</b> GRPO, RAG, LangChain, ChromaDB, PEFT (Q-LoRA), OpenAI API, BERT, KoBERT, KeyBERT, Qwen-Reranker"
+    - "<b>Vision & Multimodal:</b> VLM, SAM3, CLIP, GAN"
+    - "<b>Graph ML:</b> GNN, Knowledge Graph, Knowledge Tracing"
+    - "<b>Data Engineering:</b> AWS, Kubernetes, Airflow, Great Expectations, Amundsen, Tableau, Redash, Jenkins"
+    - "<b>Backend & DevOps:</b> FastAPI, Docker, MySQL, Terraform, CI/CD, Linux"
 
 - title: Research Experience
+  section: experience
   type: time_table
   contents:
     - title: Researcher
@@ -46,7 +39,7 @@
       logo: kaist.svg
       year: 2022.03 – Present
       description:
-        - title: "Joint R&D with a Semiconductor Inspection Equipment Company: AI Agents & Vision Inspection [DeepSeers] — Project Lead"
+        - title: '<a href="/projects/1_semiconductor_agent/">Joint R&D with a Semiconductor Inspection Equipment Company: AI Agents & Vision Inspection [DeepSeers] — Project Lead</a>'
           contents:
             - Led the project on tool-calling reliability of on-device small language model (SLM) agents for equipment control, where network access and large external models are not available
             - Built a Mock-API sandbox mimicking the equipment interfaces and a benchmark expanded by an LLM from human-defined seed scenarios, enabling large-scale tool-calling experiments and failure analysis without the real equipment
@@ -54,38 +47,38 @@
             - Added execution verification and consistency-based selection over multiple independent rollouts, substantially improving the SLM's tool-calling performance and stability without relying on larger models
             - Developed equipment-knowledge RAG and verification mechanisms to improve AI-agent response reliability
             - Research on zero-shot defect-type classification using pretrained vision models, including VLMs and SAM3
-        - title: LLM-based Learning Process Simulation [Creverse] — Project Lead
+        - title: '<a href="/projects/2_learning_simulation/">LLM-based Learning Process Simulation [Creverse] — Project Lead</a>'
           contents:
             - Led a team of second-year undergraduates as an "AI-native" team, splitting the work into independently verifiable units (data construction, model development, experiments & evaluation)
             - Developed LLM-based question and item analysis methods
             - Developed LLM-based student simulation methods
             - Built a web-based visualization and verification tool for data, model outputs, simulation, and evaluation results, reducing verification time and communication overhead with the client
-        - title: Language-Model-based Learning Content Recommendation [Chunjae Education]
+        - title: '<a href="/projects/3_content_recommendation/">Language-Model-based Learning Content Recommendation [Chunjae Education]</a>'
           contents:
             - Developed LLM-based learning-content recommendation methods
             - Built a database of learning topics and activities from lecture-video summarization
             - Built semantic recommendation systems using KoBERT and Qwen-Reranker
-        - title: Language-Model-based Automated Essay Scoring [KAIST-KT Joint Research Project]
+        - title: '<a href="/projects/4_essay_scoring/">Language-Model-based Automated Essay Scoring [KAIST-KT Joint Research Project]</a>'
           contents:
             - Served as project manager and model developer
             - Developed a generative-language-model-based multi-trait essay scoring model
             - Outperformed existing SOTA essay-scoring models while improving memory efficiency and inference speed
             - Achieved strong generalization to essays written for previously unseen prompts
             - Developed a lightweight essay-scoring model and conducted a PoC with the Gyeonggi Provincial Office of Education
-        - title: AI-based Learning Recommendation for Self-Directed Learning [KAIST-KT Joint Research Project]
+        - title: '<a href="/projects/5_learning_recommendation/">AI-based Learning Recommendation for Self-Directed Learning [KAIST-KT Joint Research Project]</a>'
           contents:
             - Served as project manager and model developer
             - Developed graph neural network (GNN)-based knowledge tracing methods
             - Developed recommendation algorithms integrating graph neural networks and natural language processing
             - Developed knowledge-graph construction methods for career recommendation
-        - title: AI-based Real Estate Valuation System
+        - title: '<a href="/projects/7_real_estate_valuation/">AI-based Real Estate Valuation System</a>'
           contents:
             - Led project management and developed data analytics/processing systems and backend services
             - Developed algorithms and a web application for data-driven real estate valuation
             - Built data collection and preprocessing modules for real-estate-related news and commercial-district data
             - Developed KeyBERT-based keyword analysis and OpenAI API-based detection of positive real-estate news signals
             - Developed the web application backend using Docker, FastAPI, and MySQL
-        - title: Image Generation for Tire Load-Test Simulation [Hankook Tire]
+        - title: '<a href="/projects/6_tire_image_generation/">Image Generation for Tire Load-Test Simulation [Hankook Tire]</a>'
           contents:
             - Conducted model design and performance analysis
             - Developed image-generation methods to replace tire-footprint images captured during load testing
@@ -93,6 +86,7 @@
             - Improved performance over the existing algorithm while substantially reducing testing costs
 
 - title: Work Experience
+  section: experience
   type: time_table
   contents:
     - title: Data Engineer
@@ -135,7 +129,7 @@
             - Analyzed internal sales and customer design trends using data-driven methods
             - Defined directions for new product development based on data analysis
 
-- title: Education
+- section: education
   type: time_table
   contents:
     - title: Ph.D. Candidate (expected Feb. 2027)
@@ -163,12 +157,7 @@
       description:
         - Graduated early in 2 years
 
-- title: Publications
-  type: list
-  contents:
-    - 29 papers — 25 international conference and 4 SCIE journal papers, 16 as first author. See the <a href="/publications/">publications</a> page for the full list.
-
-- title: Honors & Awards
+- section: awards
   type: time_table
   contents:
     - title: Creativity Award, K-DS Conference Hackathon
@@ -197,12 +186,3 @@
       description:
         - Developed a smart mirror using an NVIDIA Jetson board
         - Trained a facial-expression recognition model and built an application that delivers context-appropriate content based on detected expressions
-
-- title: Skills
-  type: list
-  contents:
-    - "<b>LLM & NLP:</b> GRPO, RAG, LangChain, ChromaDB, PEFT (Q-LoRA), OpenAI API, BERT, KoBERT, KeyBERT, Qwen-Reranker"
-    - "<b>Vision & Multimodal:</b> VLM, SAM3, CLIP, GAN"
-    - "<b>Graph ML:</b> GNN, Knowledge Graph, Knowledge Tracing"
-    - "<b>Data Engineering:</b> AWS, Kubernetes, Airflow, Great Expectations, Amundsen, Tableau, Redash, Jenkins"
-    - "<b>Backend & DevOps:</b> FastAPI, Docker, MySQL, Terraform, CI/CD, Linux"

@@ -161,3 +161,13 @@ search:
   theme: Theme
 selected_publications: selected publications
 site_description: Donghee Han is an AI research engineer and Ph.D. candidate at KAIST working on LLMs, recommender systems, and the reliability and safety of AI agents.
+# One-page home sections (navbar labels and headings)
+sections:
+  about: About
+  research: Research
+  publications: Publications
+  experience: Experience
+  education: Education
+  awards: Awards
+section_desc:
+  publications: 29 papers — 25 international conference and 4 SCIE journal papers, 16 as first author. Also on <a href="https://scholar.google.com/citations?user=M81V1F4AAAAJ">Google Scholar</a>.

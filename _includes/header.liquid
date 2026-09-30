@@ -48,15 +48,33 @@
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
-          <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              {{- about_title }}
-              {% if page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
+          {% if site.home_sections %}
+            <!-- One-page home: About + section anchors (highlighted by Bootstrap scrollspy on the home page) -->
+            {% assign section_strings = site.data[site.active_lang].strings.sections %}
+            {% if page.permalink == '/' %}
+              {% assign section_base = '' %}
+            {% else %}
+              {% assign section_base = '/' | relative_url %}
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ section_base }}#about">{{ section_strings.about | default: about_title }}</a>
+            </li>
+            {% for section in site.home_sections %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ section_base }}#{{ section }}">{{ section_strings[section] | default: section }}</a>
+              </li>
+            {% endfor %}
+          {% else %}
+            <!-- About -->
+            <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
+              <a class="nav-link" href="{{ '/' | relative_url }}">
+                {{- about_title }}
+                {% if page.permalink == '/' %}
+                  <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            </li>
+          {% endif %}
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}

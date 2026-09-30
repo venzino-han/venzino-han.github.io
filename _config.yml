@@ -361,6 +361,10 @@ exclude_from_localization: ["assets"]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
 banner_interval: 6000 # ms between slides of the About page banner
+# One-page home: sections shown below the About part, in this order (also used for the navbar).
+# Content: research/experience/education/awards come from _data/<lang>/cv.yml (`section:` key),
+# publications from _bibliography/papers.bib. Labels: `sections` in _data/<lang>/strings.yml.
+home_sections: [research, publications, experience, education, awards]
 language_labels: # text shown on the language toggle in the navbar
   en-us: English
   ko: 한국어

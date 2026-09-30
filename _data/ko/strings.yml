@@ -164,3 +164,13 @@ search:
   theme: 테마
 selected_publications: 주요 논문
 site_description: KAIST 데이터사이언스대학원 박사과정 한동희의 홈페이지입니다. LLM, 추천 시스템, AI 에이전트의 신뢰성·안전성을 연구합니다.
+# 한 페이지 홈 섹션 (메뉴·제목)
+sections:
+  about: 소개
+  research: 연구
+  publications: 논문
+  experience: 경력
+  education: 학력
+  awards: 수상
+section_desc:
+  publications: 총 29편 — 국제학술대회 25편, SCIE 저널 4편 (제1저자 16편). <a href="https://scholar.google.com/citations?user=M81V1F4AAAAJ">Google Scholar</a>에서도 확인할 수 있습니다.

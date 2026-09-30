@@ -15,7 +15,8 @@ profile:
     <p>venzino.han [at] gmail.com</p>
 
 banner: true # auto-rotating highlights banner (_data/<lang>/banner.yml)
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # full publication list is shown in the Publications section
+home_sections: true # one-page home: Research, Publications, Experience, Education, Awards (see _config.yml)
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -35,13 +36,6 @@ latest_posts:
 
 연구와 함께 여러 산학 과제를 리드하며, 연구 아이디어를 실제 데이터와 환경에서 동작하는 시스템으로 구현해 왔습니다. 예를 들어 반도체 검사장비 환경에서 On-Device 소형 언어모델(SLM) 에이전트가 도구를 안정적으로 호출하도록 만드는 프로젝트를 이끌었습니다.
 대학원 진학 전에는 버즈빌, 티맥스에이앤씨, LG하우시스에서 광고 빅데이터 플랫폼 구축, 데이터 분석 플랫폼 연구개발, 데이터 기반 시장 분석 업무를 수행했습니다.
-
-#### 연구 분야
-
-- **LLM 기반 추천** — 강화학습(GRPO), LLM 추론 능력 증류, 시뮬레이션 데이터 큐레이션을 활용한 고성능·고효율 추천 아키텍처
-- **에이전틱 AI · 신뢰성 · 안전성** — On-Device 에이전트의 안정적인 Tool-calling, 에이전트 라우팅, 검증 기반 조기 중단, Text-to-SQL, 검색 증강 생성(RAG)
-- **그래프 신경망 & 멀티모달 / 의료 AI** — GNN 기반 추천 및 지식추적, 이미지 기반 의료 진단, 멀티모달 생성 모델
-- **산학 R&D** — 반도체 검사장비 기업 DeepSeers와 AI 에이전트·비전검사 공동연구, KT·한국타이어·천재교육·크레버스 산학 프로젝트
 
 #### 일하는 방식 {#how-i-work}
 

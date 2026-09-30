@@ -1,27 +1,16 @@
-# CV 페이지 (한국어) — /ko/cv/ 에 표시
-# 섹션 type: map | time_table | nested_list | list
+# 이력 데이터 (한국어) — 한국어 홈(/ko/)의 연구·경력·학력·수상 섹션에 표시
+# section: research | experience | education | awards  (어느 섹션에 표시할지)
+# type: map | time_table | nested_list | list
 # 영문은 _data/en-us/cv.yml 이며 구조가 같습니다.
 
-- title: 기본 정보
-  type: map
-  contents:
-    - name: 이름
-      value: 한동희 (Donghee Han)
-    - name: 소속
-      value: KAIST 데이터사이언스대학원 박사과정 (2027.02 졸업예정)
-    - name: 연구실
-      value: KAIST Knowledge System Lab
-    - name: 이메일
-      value: venzino.han@gmail.com
-
-- title: 연구 및 기술 역량
+- section: research
   type: nested_list
   contents:
     - title: AI Research & Machine Learning Engineering
       items:
         - "국제우수학회 및 SCIE 저널 연구 성과: NeurIPS, EMNLP, ACL, CIKM, SIGIR, CVPR, MICCAI 등 학술대회 및 저널에 총 29편 연구 성과 발표 (SCIE 4편, 국제학술대회 25편 / 1저자 16편)"
         - "LLM-based Recommendation System: 강화학습(GRPO), LLM 추론 능력 증류, 시뮬레이션 데이터 큐레이션 등 고성능·고효율 LLM 기반 추천 아키텍처 연구 및 개발"
-        - "Agentic AI & Advanced RAG: 에이전트 라우팅, 검증 기반 조기 중단 메커니즘, Text-to-SQL, 답변 신뢰성 강화 등 복합 추론 및 검색 증강 생성 파이프라인 설계"
+        - "Agentic AI & Advanced RAG: 에이전트 라우팅, 검증 기반 조기 중단 메커니즘, Text-to-SQL, On-Device 에이전트의 안정적인 Tool-calling 등 신뢰성·안전성을 높인 복합 추론 및 검색 증강 생성 파이프라인 설계"
         - "Graph Neural Networks & Multimodal/Medical AI: GNN 기반 추천 및 지식추적, 이미지 기반 의료 진단 및 멀티모달 생성 모델 연구"
         - "산학 R&D & Semiconductor AI: 반도체 검사장비 기업 DeepSeers와 AI 에이전트·비전검사 공동연구 수행. KT, 한국타이어, 천재교육, 크레버스 등 산학 프로젝트에서 PM·핵심 모듈 개발 및 PoC/상용화 주도"
     - title: Data & Software Engineering
@@ -30,15 +19,19 @@
         - "ML Serving & 백엔드 개발: FastAPI, Docker, MySQL 기반의 경량화 모델 추론 서빙 및 백엔드 시스템 개발"
         - "클라우드 인프라 & DevOps: Terraform을 활용한 IaC, CI/CD 자동화"
         - "AI 인프라 및 GPU 환경 최적화: Multi-GPU 서버/워크스테이션 환경 구축, 리눅스 시스템 관리 및 최신 개발 도구를 활용한 엔지니어링 생산성 극대화"
-    - title: 일하는 방식
-      items:
-        - "복잡한 문제를 구조화하고, 끝까지 실행하여 결과로 만드는 능력"
-        - "무엇을 학습시키고 어떻게 검증할지 설계: 데이터 구축, 샌드박스, 벤치마크, 평가 체계를 하나의 시스템으로 연결"
-        - "실패 중심 분석: 데이터를 분해하고 실패 사례를 유형화하여 검증 가능한 가설로 전환"
-        - "AI Native 협업: 독립적으로 검증 가능한 업무 단위와, 팀원·고객이 결과를 빠르게 확인할 수 있는 도구 설계"
-        - "장기간 고강도 업무를 꾸준히 유지하는 체력과, 팀 분위기를 긍정적이고 솔직하게 만드는 유머"
+
+- title: 기술 스택
+  section: research
+  type: list
+  contents:
+    - "<b>LLM · NLP:</b> GRPO, RAG, LangChain, ChromaDB, PEFT (Q-LoRA), OpenAI API, BERT, KoBERT, KeyBERT, Qwen-Reranker"
+    - "<b>비전 · 멀티모달:</b> VLM, SAM3, CLIP, GAN"
+    - "<b>그래프 ML:</b> GNN, 지식그래프, 지식추적"
+    - "<b>데이터 엔지니어링:</b> AWS, Kubernetes, Airflow, Great Expectations, Amundsen, Tableau, Redash, Jenkins"
+    - "<b>백엔드 · DevOps:</b> FastAPI, Docker, MySQL, Terraform, CI/CD, Linux"
 
 - title: 연구 경력
+  section: experience
   type: time_table
   contents:
     - title: Researcher
@@ -46,7 +39,7 @@
       logo: kaist.svg
       year: 2022.03 – 현재
       description:
-        - title: "반도체 검사장비 기업 공동 R&D: AI 에이전트 및 비전검사 기술 [DeepSeers] — 프로젝트 리드"
+        - title: '<a href="/projects/1_semiconductor_agent/">반도체 검사장비 기업 공동 R&D: AI 에이전트 및 비전검사 기술 [DeepSeers] — 프로젝트 리드</a>'
           contents:
             - 네트워크·외부 대형 모델 사용이 어려운 장비 환경에서 On-Device 소형 언어모델(SLM) 에이전트의 Tool-calling 안정성과 실행 신뢰성을 높이는 프로젝트 리드
             - 실제 장비 인터페이스를 모사한 Mock API Sandbox와, 사람이 정의한 seed 시나리오를 LLM으로 확장한 벤치마크를 구축해 실제 장비 없이 대규모 Tool-calling 실험·실패 분석 수행
@@ -54,38 +47,38 @@
             - 실행 결과 검증과 다중 독립 Rollout의 일관성 기반 선택 구조를 결합해, 대형 모델 의존 없이 SLM의 Tool-calling 성능과 안정성을 크게 향상
             - 장비 지식 RAG 및 검증 기반 AI 에이전트 답변 신뢰도 강화 연구
             - 사전학습 비전모델(VLM, SAM3 등)을 활용한 zero-shot 불량 유형 분류 연구
-        - title: LLM 기반 학습과정 시뮬레이션 기술 개발 [크레버스] — 프로젝트 리드
+        - title: '<a href="/projects/2_learning_simulation/">LLM 기반 학습과정 시뮬레이션 기술 개발 [크레버스] — 프로젝트 리드</a>'
           contents:
             - 학부 2학년 구성원 중심의 'AI Native' 팀을 운영하며 데이터 구축·모델 개발·실험/평가를 독립적으로 검증 가능한 단위로 분담
             - LLM 기반 문항 분석 기술 개발
             - LLM 기반 학생 시뮬레이션 기술 개발
             - 데이터·모델 출력·시뮬레이션·평가 결과를 직접 탐색하는 웹 기반 시각화·검증 도구를 구축해 고객사 검증 시간과 커뮤니케이션 비용 절감
-        - title: 언어모델을 활용한 강의 콘텐츠 추천 기술 개발 [천재교육]
+        - title: '<a href="/projects/3_content_recommendation/">언어모델을 활용한 강의 콘텐츠 추천 기술 개발 [천재교육]</a>'
           contents:
             - LLM 기반 학습콘텐츠 추천기술 개발
             - 강의 영상 요약 기반 학습주제 및 활동 DB 구축
             - KoBERT, Qwen-Reranker 기반 시맨틱 추천 시스템 구축
-        - title: 언어모델을 활용한 에세이 평가 기술 개발 [KAIST-KT 공동연구 프로젝트]
+        - title: '<a href="/projects/4_essay_scoring/">언어모델을 활용한 에세이 평가 기술 개발 [KAIST-KT 공동연구 프로젝트]</a>'
           contents:
             - 프로젝트 PM 및 모델 개발 역할 수행
             - 생성형 언어모델을 활용한 다중 지표 에세이 평가 모델 개발
             - 기존 SOTA 에세이평가 모델 대비 높은 성능 달성 및 메모리/추론속도 효율성 향상
             - 새로운 제시문 에세이가 주어지는 경우에도 평가 가능한 높은 일반화 성능 달성
             - 경량화 에세이 평가 모델 개발 및 경기도교육청 PoC 수행
-        - title: 자기주도적 학습을 위한 AI 기반 학습 추천 시스템 개발 [KAIST-KT 공동연구 프로젝트]
+        - title: '<a href="/projects/5_learning_recommendation/">자기주도적 학습을 위한 AI 기반 학습 추천 시스템 개발 [KAIST-KT 공동연구 프로젝트]</a>'
           contents:
             - 프로젝트 PM 및 모델 개발 역할 수행
             - 그래프신경망(GNN) 기반 지식추적 기술 개발
             - 그래프신경망과 자연어처리 기술을 통합한 추천 알고리즘 개발
             - 진로 추천을 위한 지식그래프 구축 기술 개발
-        - title: AI 기반 부동산 가치 분석시스템 개발
+        - title: '<a href="/projects/7_real_estate_valuation/">AI 기반 부동산 가치 분석시스템 개발</a>'
           contents:
             - 프로젝트 PM 및 데이터 분석·처리 시스템, 백엔드 개발 수행
             - 데이터를 기반으로 부동산 가치분석을 수행하는 알고리즘 및 웹 어플리케이션 개발
             - 뉴스, 상권 등 부동산 관련 데이터 수집 및 전처리 모듈 개발
             - KeyBERT 기반 키워드 분석 및 OpenAI API를 활용한 관련 뉴스 호재 분석 기능 개발
             - 웹 어플리케이션 백엔드 개발 (Docker, FastAPI, MySQL)
-        - title: 타이어 하중 테스트 시뮬레이션을 위한 이미지 생성기술 개발 [한국타이어]
+        - title: '<a href="/projects/6_tire_image_generation/">타이어 하중 테스트 시뮬레이션을 위한 이미지 생성기술 개발 [한국타이어]</a>'
           contents:
             - 모델 설계 및 성능 분석 수행
             - 타이어 하중 테스트 시 촬영되는 풋프린트 이미지를 대체하기 위한 이미지 생성 기술 개발
@@ -93,6 +86,7 @@
             - 기존 알고리즘 대비 향상된 성능 달성, 테스트에 들어가는 비용을 획기적으로 절약
 
 - title: 실무 경력
+  section: experience
   type: time_table
   contents:
     - title: Data Engineer
@@ -135,7 +129,7 @@
             - 데이터 기반 자사 매출 및 고객사 디자인 트렌드 분석
             - 데이터 기반 신제품 개발 방향 수립
 
-- title: 학력
+- section: education
   type: time_table
   contents:
     - title: 박사 (졸업예정)
@@ -163,12 +157,7 @@
       description:
         - 2년 조기졸업
 
-- title: 논문
-  type: list
-  contents:
-    - 총 29편 — 국제학술대회 25편, SCIE 저널 4편 (제1저자 16편). 전체 목록은 <a href="/publications/">논문</a> 페이지를 참고하세요.
-
-- title: 수상
+- section: awards
   type: time_table
   contents:
     - title: K-DS 컨퍼런스 해커톤 창의상
@@ -197,12 +186,3 @@
       description:
         - NVIDIA Jetson board를 활용한 스마트 미러 개발
         - 표정 인식 모델 학습 및 표정에 따른 적절한 콘텐츠를 제공하는 어플리케이션 개발
-
-- title: 기술 스택
-  type: list
-  contents:
-    - "<b>LLM · NLP:</b> GRPO, RAG, LangChain, ChromaDB, PEFT (Q-LoRA), OpenAI API, BERT, KoBERT, KeyBERT, Qwen-Reranker"
-    - "<b>비전 · 멀티모달:</b> VLM, SAM3, CLIP, GAN"
-    - "<b>그래프 ML:</b> GNN, 지식그래프, 지식추적"
-    - "<b>데이터 엔지니어링:</b> AWS, Kubernetes, Airflow, Great Expectations, Amundsen, Tableau, Redash, Jenkins"
-    - "<b>백엔드 · DevOps:</b> FastAPI, Docker, MySQL, Terraform, CI/CD, Linux"

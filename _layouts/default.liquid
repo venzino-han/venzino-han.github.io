@@ -21,7 +21,12 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body
+    class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}"
+    {% if page.home_sections %}
+      data-spy="scroll" data-target="#navbarNav" data-offset="90"
+    {% endif %}
+  >
     <!-- Header -->
     {% include header.liquid %}
 

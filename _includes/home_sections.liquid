@@ -1,0 +1,50 @@
+{% comment %}
+  One-page home sections rendered below the About part.
+  Order: site.home_sections (_config.yml)
+  - publications: _bibliography/papers.bib (jekyll-scholar)
+  - others: entries of _data/<lang>/cv.yml whose `section` matches
+{% endcomment %}
+{% assign strings = site.data[site.active_lang].strings %}
+{% assign cv_entries = site.data[site.active_lang].cv %}
+{% for section in site.home_sections %}
+  <section id="{{ section }}" class="home-section">
+    <h2 class="home-section-title">{{ strings.sections[section] | default: section }}</h2>
+    {% if strings.section_desc[section] %}
+      <p class="home-section-desc">{{ strings.section_desc[section] }}</p>
+    {% endif %}
+
+    {% if section == 'publications' %}
+      {% include bib_search.liquid %}
+      <div class="publications">
+        {% bibliography %}
+      </div>
+    {% else %}
+      <div class="cv">
+        {% for entry in cv_entries %}
+          {% if entry.section == section %}
+            <div class="card mt-3 p-3">
+              {% if entry.title %}
+                <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+              {% endif %}
+              <div>
+                {% if entry.type == 'list' %}
+                  {% include cv/list.liquid %}
+                {% elsif entry.type == 'map' %}
+                  {% include cv/map.liquid %}
+                {% elsif entry.type == 'nested_list' %}
+                  {% include cv/nested_list.liquid %}
+                {% elsif entry.type == 'time_table' %}
+                  {% include cv/time_table.liquid %}
+                {% elsif entry.type == 'list_groups' %}
+                  {% include cv/list_groups.liquid %}
+                {% else %}
+                  {{ entry.contents }}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </section>
+{% endfor %}

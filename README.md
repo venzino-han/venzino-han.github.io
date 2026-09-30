@@ -6,19 +6,22 @@
 - 영문: https://venzino-han.github.io/
 - 한국어: https://venzino-han.github.io/ko/
 
-상단 메뉴: about · publications · projects · cv, 검색(ctrl+k), 언어 전환(English/한국어), 다크 모드
+한 페이지 구성입니다. 상단 메뉴 **About · Research · Publications · Experience · Education · Awards** 를 누르면 해당 섹션으로 이동하며(스크롤 위치에 따라 메뉴 강조), 검색(ctrl+k)·언어 전환(English/한국어)·다크 모드를 지원합니다.
+프로젝트 상세 설명은 Experience 의 각 프로젝트 제목을 누르면 열리는 별도 페이지(`/projects/...`)에 있습니다.
 
 ## 내용 수정 위치
 
 | 내용 | 파일 |
 |------|------|
-| 소개(바이오), 오른쪽 소속 정보, 프로필 사진 | `_pages/en-us/about.md`, `_pages/ko/about.md` |
-| 논문 목록 (두 언어 공용) | `_bibliography/papers.bib` |
-| CV (경력·학력·수상·기술) | `_data/en-us/cv.yml`, `_data/ko/cv.yml` |
-| 프로젝트 카드 | `_projects/en-us/*.md`, `_projects/ko/*.md` |
+| 배너 (자동 슬라이드) | `_data/en-us/banner.yml`, `_data/ko/banner.yml` |
+| About: 소개(바이오), 일하는 방식, 오른쪽 소속 정보, 프로필 사진 | `_pages/en-us/about.md`, `_pages/ko/about.md` |
+| Research (역량 요약·기술 스택), Experience, Education, Awards | `_data/en-us/cv.yml`, `_data/ko/cv.yml` (`section:` 값으로 섹션 지정) |
+| Publications (두 언어 공용) | `_bibliography/papers.bib` |
+| 프로젝트 상세 페이지 | `_projects/en-us/*.md`, `_projects/ko/*.md` |
 | 이메일·Scholar·GitHub·LinkedIn 아이콘 | `_data/socials.yml` |
-| 메뉴·버튼 등 화면 문구 | `_data/en-us/strings.yml`, `_data/ko/strings.yml` |
-| 사이트 설정 (이름, URL, 언어, 논문 저자 하이라이트) | `_config.yml` |
+| 메뉴·섹션 이름, 화면 문구 | `_data/en-us/strings.yml`, `_data/ko/strings.yml` (`sections`) |
+| 섹션 순서, 사이트 설정 | `_config.yml` (`home_sections`) |
+| 학교·회사 로고 | `assets/img/logos/` (cv.yml 의 `logo:` 에 파일명) |
 
 ### 논문 추가 (`_bibliography/papers.bib`)
 
@@ -64,7 +67,6 @@
 ### 자주 하는 작업
 
 - **프로필 사진**: 사진을 `assets/img/prof_pic.jpg` 로 넣고 `_pages/*/about.md` 의 `profile.image` 에 `prof_pic.jpg` 를 적습니다.
-- **CV PDF 버튼**: PDF 를 `assets/pdf/en-us/cv.pdf`, `assets/pdf/ko/cv.pdf` 로 넣고 `_pages/*/cv.md` 의 `cv_pdf: cv.pdf` 주석을 해제합니다.
 - **소식(news)**: `_news/en-us/`, `_news/ko/` 에 `2026-10-01-accepted.md` 형태로 글을 추가하고 `about.md` 의 `announcements.enabled` 를 `true` 로 바꿉니다.
 
 ## 로컬 미리보기
