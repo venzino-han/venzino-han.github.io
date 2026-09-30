@@ -1,171 +1,289 @@
 #
-# English CV data  →  https://<site>/
-# The Korean version lives in _data/ko.yml and uses the same structure.
+# English page text  →  https://venzino-han.github.io/
+# The Korean page uses _data/ko.yml with the same keys.
+# Publications live in _data/publications.yml; links in _data/common.yml.
 #
-# - Values under `details`, `summary`, `authors`, `venue` support Markdown.
-# - Remove (or comment out) a whole block to hide that section.
-# - Section order is set by `sections:` in _config.yml.
-# - A YAML syntax error here breaks the build: quote values containing ": " or "#".
+# Tips: `bio` supports Markdown. Quote values that contain ": " or " #".
 #
-# TODO: every value below is SAMPLE content. Replace it with your own.
 
-description: Researcher & engineer working on machine learning. # <meta description>
-
-# UI labels (translate only; keys must match _data/ko.yml)
-ui:
+meta:
+  title: Donghee Han — AI Research Engineer
+  description: >-
+    Donghee Han is an AI research engineer and Ph.D. candidate at KAIST working on
+    LLM-based recommender systems, agentic AI & RAG, and graph neural networks.
   locale: en_US
-  print: Print
-  pdf: PDF
-  pdf_suffix: CV
-  generating: Generating...
-  timezone: Timezone
-  resume_pdf: CV (PDF)
 
-sidebar:
-  name: Venzino Han
-  tagline: ML Researcher / Software Engineer
-  avatar: # put a square image (e.g. profile.jpg) in assets/images/ and write its file name here
+# ------------------------------------------------------------------ UI labels
+ui:
+  nav:
+    about: About
+    research: Research
+    publications: Publications
+    experience: Experience
+    education: Education
+    awards: Awards
+  menu: Menu
+  theme: Toggle dark mode
+  print: Print / Save as PDF
+  skip: Skip to content
+  email: Email
+  cv: CV
+  filter_label: Filter publications
+  filters:
+    all: All
+    conference: Conference
+    journal: Journal
+    first: First author
+  roles:
+    first: First author
+    co-first: Co-first author
+    second: 2nd author
+    co-author: Co-author
+  links:
+    doi: DOI
+    arxiv: arXiv
+    url: Paper
+    pdf: PDF
+    code: Code
+  stats:
+    publications: Publications
+    first: First-author
+    journals: SCIE journals
+    citations: Citations
+  pub_summary: "{total} papers · {conference} conference · {journal} journal · {first} as first author"
+  empty: No publications match this filter.
+  contact_title: Get in touch
+  contact_text: For research collaborations or other inquiries, please reach out by email.
+  updated: Last updated
+  date_format: "%b %Y"
 
-  # Contact & links (leave empty to hide)
-  email: your.email@example.com
-  phone:
-  website:
-  github: venzino-han
-  linkedin: # LinkedIn ID (linkedin.com/in/<id>)
-  scholar: # Google Scholar user ID (scholar.google.com/citations?user=<id>)
-  orcid: # 0000-0000-0000-0000
-  researchgate:
-  twitter:
-  pdf: # link to a PDF version of your CV, e.g. /assets/files/cv_en.pdf
-
-  languages:
-    title: Languages
-    info:
-      - idiom: Korean
-        level: Native
-      - idiom: English
-        level: Professional
-
-  interests:
-    title: Interests
-    info:
-      - item: Open Source
-        link:
-      - item: Running
-        link:
-
+# ------------------------------------------------------------------ About (hero)
 profile:
-  title: About Me
-  summary: |
-    I am a researcher and engineer interested in **machine learning** and its
-    real-world applications. Write two or three sentences summarizing your
-    research focus, industry experience, and what you are looking for next.
-  interests_title: Research Interests
+  name: Donghee Han
+  name_alt: 한동희
+  role: AI Research Engineer
+  affiliation: Ph.D. Candidate · KAIST Graduate School of Data Science
+  bio: |
+    I am an AI research engineer and a Ph.D. candidate at the **KAIST Graduate School of Data Science**
+    (Knowledge System Lab), expected to graduate in February 2027. My research focuses on
+    **LLM-based recommender systems**, **agentic AI and retrieval-augmented generation**, and
+    **graph neural networks**, with 29 publications at venues including NeurIPS, EMNLP, ACL,
+    CIKM, SIGIR, CVPR, and MICCAI.
+
+    Before graduate school, I worked in industry on data engineering, analytics-platform R&D,
+    and data-driven market analysis at Buzzvil, Tmax A&C, and LG Hausys.
+  interests_title: Research interests
   interests:
-    - Graph Neural Networks
+    - Large Language Models
     - Recommender Systems
-    - Representation Learning
+    - Agentic AI & RAG
+    - Natural Language Processing
+    - Graph Neural Networks
+    - Multimodal / Medical AI
 
-education:
-  title: Education
-  info:
-    - degree: Ph.D. in Computer Science
-      university: Example University
-      time: 2020 – 2025
-      details: |
-        Thesis: *A Sample Thesis Title*. Advisor: Prof. Jane Doe
-    - degree: B.S. in Computer Science
-      university: Example University
-      time: 2014 – 2020
-
+# ------------------------------------------------------------------ Research & expertise
 research:
-  title: Research Experience
-  info:
-    - role: Graduate Researcher
-      organization: Example AI Lab, Example University
-      link: https://example.com
-      location: Seoul, Korea
-      time: 2020 – 2025
-      details: |
-        - Proposed a new graph-based model for ... (published at CONF 2024)
-        - Built a large-scale benchmark dataset for ...
-      tags: [PyTorch, GNN, Recommender Systems]
-    - role: Research Intern
-      organization: Example Research Center
-      time: 2019.06 – 2019.08
-      details: |
-        - Worked on ...
+  title: Research & Expertise
+  lead: From LLM-based recommendation and agentic RAG to large-scale data platforms — research ideas taken all the way to working systems.
+  groups:
+    - title: AI Research & Machine Learning Engineering
+      items:
+        - icon: wand-magic-sparkles
+          title: LLM-based Recommendation Systems
+          desc: Research and development of high-performance, efficient LLM-based recommendation architectures using reinforcement learning (GRPO), LLM reasoning distillation, and simulation-based data curation.
+        - icon: robot
+          title: Agentic AI & Advanced RAG
+          desc: Design of complex reasoning and retrieval-augmented generation pipelines, including agent routing, verification-aware early stopping, Text-to-SQL, and reliability enhancement.
+        - icon: circle-nodes
+          title: Graph Neural Networks & Multimodal / Medical AI
+          desc: Research on GNN-based recommendation and knowledge tracing, image-based medical diagnosis, and multimodal generative models.
+        - icon: microchip
+          title: Industry R&D & Semiconductor AI
+          desc: Joint research with semiconductor inspection equipment company DeepSeers on AI agents and vision inspection; led PM, core-module development, PoC, and commercialization efforts with KT, Hankook Tire, Chunjae Education, and Creverse.
+    - title: Data & Software Engineering
+      items:
+        - icon: diagram-project
+          title: Large-Scale Distributed Data Pipelines
+          desc: Engineered advertising big-data platforms and real-time/batch data pipelines using AWS, Kubernetes, and Airflow; implemented data quality management and data catalog systems.
+        - icon: server
+          title: ML Serving & Backend Development
+          desc: Built lightweight model inference services and backend systems using FastAPI, Docker, and MySQL.
+        - icon: cloud
+          title: Cloud Infrastructure & DevOps
+          desc: Implemented infrastructure as code (IaC) with Terraform and CI/CD automation.
+        - icon: gauge-high
+          title: AI Infrastructure & GPU Optimization
+          desc: Built and operated multi-GPU servers and workstations, administered Linux systems, and improved engineering productivity with modern AI development tools.
+  stack_title: Tools & Technologies
+  stack:
+    - name: LLM & NLP
+      items: [GRPO, RAG, LangChain, ChromaDB, "PEFT (Q-LoRA)", OpenAI API, BERT, KoBERT, KeyBERT, Qwen-Reranker]
+    - name: Vision & Multimodal
+      items: [VLM, SAM3, CLIP, GAN]
+    - name: Graph ML
+      items: [GNN, Knowledge Graph, Knowledge Tracing]
+    - name: Data Engineering
+      items: [AWS, Kubernetes, Airflow, Great Expectations, Amundsen, Tableau, Redash, Jenkins]
+    - name: Backend & DevOps
+      items: [FastAPI, Docker, MySQL, Terraform, CI/CD, Linux]
 
-experiences:
-  title: Work Experience
-  info:
-    - role: Machine Learning Engineer
-      organization: Example Corp.
-      location: Seoul, Korea
-      time: 2025 – Present
-      details: |
-        - Designed and deployed an ML pipeline serving N million users
-        - Reduced inference latency by 40% through ...
-      tags: [Python, Kubernetes, MLOps]
-
+# ------------------------------------------------------------------ Publications
 publications:
   title: Publications
-  intro: |
-    \* equal contribution. Full list on [Google Scholar](https://scholar.google.com).
-  groups:
-    - title: International Conferences
-      papers:
-        - title: A Sample Paper Title on Graph Learning
-          authors: "**Venzino Han**, Coauthor A, Coauthor B"
-          venue: Proceedings of the Example Conference (CONF)
-          year: 2024
-          note: Oral
-          link: https://example.com
-          links:
-            - name: PDF
-              url: https://example.com
-            - name: Code
-              url: https://github.com/venzino-han
-    - title: International Journals
-      papers:
-        - title: Another Sample Paper Title
-          authors: "Coauthor A\\*, **Venzino Han**\\*, Coauthor B"
-          venue: Example Journal of Machine Learning, 12(3)
-          year: 2023
-          links:
-            - name: DOI
-              url: https://doi.org/10.0000/example
+  lead: International conferences and SCIE journals, grouped by year.
 
-projects:
-  title: Projects
-  intro: Selected research and personal projects.
-  info:
-    - title: Sample Project
-      link: https://github.com/venzino-han
-      time: 2024
-      tagline: One-line description of the project.
-      details: |
-        - What you built, your role, and the outcome
-      tags: [PyTorch, FastAPI]
+# ------------------------------------------------------------------ Experience
+experience:
+  title: Experience
+  items:
+    - org: KAIST Knowledge System Lab
+      role: Researcher
+      period: 2022.03 – Present
+      current: true
+      projects:
+        - title: LLM-based Learning Process Simulation
+          client: Creverse
+          bullets:
+            - Developed LLM-based question and item analysis methods
+            - Developed LLM-based student simulation methods
+        - title: "Joint R&D with a Semiconductor Inspection Equipment Company: AI Agents & Vision Inspection"
+          client: DeepSeers
+          bullets:
+            - Research on reliable AI-agent tool calling and execution for semiconductor vision-inspection equipment control scenarios
+            - Developed equipment-knowledge RAG and verification mechanisms to improve AI-agent response reliability
+            - Research on zero-shot defect-type classification using pretrained vision models, including VLMs and SAM3
+        - title: Language-Model-based Learning Content Recommendation
+          client: Chunjae Education
+          bullets:
+            - Developed LLM-based learning-content recommendation methods
+            - Built a database of learning topics and activities from lecture-video summarization
+            - Built semantic recommendation systems using KoBERT and Qwen-Reranker
+        - title: Language-Model-based Automated Essay Scoring
+          client: KAIST-KT Joint Research
+          bullets:
+            - Served as project manager and model developer
+            - Developed a generative-language-model-based multi-trait essay scoring model
+            - Outperformed existing SOTA essay-scoring models while improving memory efficiency and inference speed
+            - Achieved strong generalization to essays written for previously unseen prompts
+            - Developed a lightweight essay-scoring model and conducted a PoC with the Gyeonggi Provincial Office of Education
+        - title: AI-based Learning Recommendation for Self-Directed Learning
+          client: KAIST-KT Joint Research
+          bullets:
+            - Served as project manager and model developer
+            - Developed graph neural network (GNN)-based knowledge tracing methods
+            - Developed recommendation algorithms integrating graph neural networks and natural language processing
+            - Developed knowledge-graph construction methods for career recommendation
+        - title: AI-based Real Estate Valuation System
+          bullets:
+            - Led project management and developed data analytics/processing systems and backend services
+            - Developed algorithms and a web application for data-driven real estate valuation
+            - Built data collection and preprocessing modules for real-estate-related news and commercial-district data
+            - Developed KeyBERT-based keyword analysis and OpenAI API-based detection of positive real-estate news signals
+            - Developed the web application backend using Docker, FastAPI, and MySQL
+        - title: Image Generation for Tire Load-Test Simulation
+          client: Hankook Tire
+          bullets:
+            - Conducted model design and performance analysis
+            - Developed image-generation methods to replace tire-footprint images captured during load testing
+            - Applied CLIP and GAN models to generate images conditioned on tire load-test variables and experimental settings
+            - Improved performance over the existing algorithm while substantially reducing testing costs
 
+    - org: Buzzvil
+      role: Data Engineer
+      period: 2020.12 – 2022.02
+      projects:
+        - title: Advertising Big-Data Analytics Platform & Data Pipeline Development
+          bullets:
+            - Built and operated AWS-based data lakes, data warehouses, and data marts
+            - Operated Airflow data pipelines on Kubernetes and developed and maintained new pipeline features
+            - Migrated Jenkins-based batch processes to Airflow pipelines, improving operational efficiency
+            - Built a data platform for in-house operation of the SK Planet advertising platform
+            - Introduced the Amundsen data discovery platform and developed data pipelines for Tableau and Redash dashboards
+            - Developed and validated an advertising-spend forecasting algorithm through PoC
+            - Conducted a PoC for data quality management using Great Expectations
+
+    - org: Tmax A&C
+      role: Researcher
+      period: 2018.08 – 2020.07
+      projects:
+        - title: Integrated Data Analytics Platform R&D
+          bullets:
+            - Planned and designed data preprocessing and visualization modules
+            - Planned and designed data exploration and pipeline-building modules
+            - Designed an AutoML module and conducted a PoC
+            - Designed a natural-language-based data analytics module and conducted a PoC
+        - title: CRM/ERP Integrated Platform R&D
+          bullets:
+            - Planned and designed initial product features
+            - Planned and designed AICC-related features
+
+    - org: LG Hausys
+      role: Associate
+      period: 2016.01 – 2018.07
+      projects:
+        - title: New-Design Sales Analytics & Global Market Strategy
+          bullets:
+            - Built a process for collecting global design-trend data
+            - Analyzed internal sales and customer design trends using data-driven methods
+            - Defined directions for new product development based on data analysis
+
+# ------------------------------------------------------------------ Education
+education:
+  title: Education
+  items:
+    - title: Ph.D. Candidate
+      school: KAIST Graduate School of Data Science (Industrial & Systems Engineering)
+      period: 2023.09 – 2027.02
+      badge: Expected Feb. 2027
+      details:
+        - "Research areas: LLMs, Recommender Systems, Natural Language Processing"
+    - title: M.S.
+      school: KAIST Graduate School of Data Science (Industrial & Systems Engineering)
+      period: 2022.03 – 2023.08
+      details:
+        - "Research areas: Recommender Systems, Natural Language Processing"
+        - "Graduated early in 3 semesters (GPA: 3.85/4.3)"
+    - title: B.S. in Industrial Design, Minor in Technology Management
+      school: KAIST
+      period: 2009.02 – 2016.02
+      details:
+        - "Research area: Physical Computing"
+    - title: Kangwon Science High School
+      period: 2007.03 – 2009.02
+      details:
+        - Graduated early in 2 years
+
+# ------------------------------------------------------------------ Awards
 awards:
   title: Honors & Awards
-  info:
-    - title: Best Paper Award
-      organization: Example Conference 2024
-      time: 2024
-    - title: Graduate Research Fellowship
-      organization: Example Foundation
-      time: 2021 – 2023
-
-skills:
-  title: Skills
-  groups:
-    - name: Languages
-      items: [Python, C++, SQL]
-    - name: ML / Data
-      items: [PyTorch, TensorFlow, scikit-learn, Pandas]
-    - name: Infra / Tools
-      items: [Docker, Kubernetes, Git, Linux]
-
-footer: # extra footer text (optional)
+  items:
+    - title: Creativity Award
+      event: K-DS Conference Hackathon
+      date: Nov. 30, 2023
+      summary: Awarded at the conference hackathon hosted by the K-DS Consortium
+      bullets:
+        - Developed a KoAlpaca-based standalone LLM service for interactive Korean-history learning
+        - Fine-tuned on Korean-history data using PEFT (Q-LoRA)
+        - Implemented key-value-based RAG centered on core concepts using ChromaDB and FastAPI
+    - title: Grand Prize
+      event: AI Education Hackathon
+      date: Aug. 27, 2023
+      bullets:
+        - Developed an application for generating and scoring open-ended questions using the OpenAI API (GPT-3.5)
+        - Generated new questions using prior exam questions and domain knowledge through RAG
+        - Scored open-ended responses using reference answers and related knowledge, and predicted pass probability from learner history
+        - Integrated a vector DB (Chroma) with GPT-3.5 using LangChain and implemented in-context learning
+    - title: Excellence Award
+      event: Pangyo AI CAMP · Natural Language Processing Track
+      date: Sep. 1, 2021
+      bullets:
+        - Developed a BERT-based small-business Q&A dialogue classification model (3rd place)
+        - Classified 375K question-answer dialogues into 118 categories
+        - Improved performance through data augmentation and model ensembling
+        - Addressed class imbalance by using partial dialogue segments for minority-label examples
+    - title: Grand Prize
+      event: SKT AI Hackathon
+      date: Aug. 27, 2017
+      bullets:
+        - Developed a smart mirror using an NVIDIA Jetson board
+        - Trained a facial-expression recognition model and built an application that delivers context-appropriate content based on detected expressions

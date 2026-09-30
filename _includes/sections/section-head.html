@@ -1,0 +1,19 @@
+{%- comment -%}
+  섹션 제목. include.id / include.title / include.lead
+  번호(01, 02 …)는 _config.yml 의 sections 순서에서 자동 계산됩니다.
+{%- endcomment -%}
+{%- assign n = 0 -%}
+{%- assign index = 0 -%}
+{%- for s in site.sections -%}
+  {%- if s != "about" -%}
+    {%- assign n = n | plus: 1 -%}
+    {%- if s == include.id -%}{%- assign index = n -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+<header class="section-head">
+  <p class="section-index" aria-hidden="true">{% if index < 10 %}0{% endif %}{{ index }}</p>
+  <h2 class="section-title" id="{{ include.id }}-title">{{ include.title }}</h2>
+  {%- if include.lead %}
+  <p class="section-lead">{{ include.lead }}</p>
+  {%- endif %}
+</header>

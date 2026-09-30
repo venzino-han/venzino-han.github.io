@@ -1,65 +1,55 @@
 # ------------------------------------------------------------------
 # 사이트 설정 (Site settings)
-# 이력 내용은 _data/en.yml (영문), _data/ko.yml (한국어) 에서 수정합니다.
-# 설정 변경 후에는 `jekyll serve` 를 재시작해야 반영됩니다.
+#
+# 내용은 _data/ 폴더의 YAML 파일에서 수정합니다.
+#   _data/en.yml            영문 페이지 문구 (/)
+#   _data/ko.yml            한국어 페이지 문구 (/ko/)
+#   _data/publications.yml  논문 목록 (두 언어 공용)
+#   _data/common.yml        연락처·링크 등 공용 정보
+# 이 파일(_config.yml)을 바꾼 뒤에는 `jekyll serve` 를 재시작해야 반영됩니다.
 # ------------------------------------------------------------------
 
-# GitHub 사용자 페이지(<username>.github.io 저장소)라면 baseurl 은 비워둡니다.
-# 프로젝트 페이지(예: 저장소 이름이 cv 라면)는 baseurl: /cv 로 설정합니다.
 url: https://venzino-han.github.io
-baseurl: ""
+baseurl: "" # 사용자 페이지(<username>.github.io)는 비워둡니다.
 
 # 기본 언어 (루트 URL "/" 에 표시되는 언어)
 default_lang: en
 
-# 지원 언어 목록. 각 언어의 데이터는 _data/<code>.yml 에 있어야 합니다.
+# 지원 언어. 각 언어의 데이터는 _data/<code>.yml 에 있어야 합니다.
 languages:
   - code: en
-    label: English
+    label: EN
+    name: English
     url: /
   - code: ko
-    label: 한국어
+    label: KO
+    name: 한국어
     url: /ko/
 
-# 본문 섹션 순서. 항목을 지우거나 순서를 바꾸면 페이지에 그대로 반영됩니다.
-# 사용 가능: profile, research, experiences, publications, projects,
-#           awards, education, certifications, oss, skills, recommendations
+# 헤더 메뉴와 본문 섹션 순서. 지우거나 순서를 바꾸면 그대로 반영됩니다.
+# 사용 가능: about, research, publications, experience, education, awards
 sections:
-  - profile
+  - about
   - research
-  - experiences
   - publications
-  - projects
+  - experience
+  - education
   - awards
-  - skills
 
-# 사이드바 설정
-sidebar_position: left # left 또는 right
-sidebar_education: true # true 이면 학력을 사이드바에, false 이면 본문에 표시
-
-# 색상 테마: blue turquoise green berry orange ceramic teal oceanstale
-theme_skin: blue
-chrome_mobile_color: # 예: "#1976d2"
-
-# Google Analytics 측정 ID (예: G-XXXXXXXXXX). 비워두면 비활성화됩니다.
+# Google Analytics 4 측정 ID (예: G-XXXXXXXXXX). 비워두면 비활성화됩니다.
 analytics:
 
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-encoding: "utf-8"
+encoding: utf-8
 
 exclude:
   - README.md
-  - LICENSE.md
   - Gemfile
   - Gemfile.lock
   - docker-compose.yml
   - vendor
   - graft
+  - github_token.txt
 
-# Development Settings
+# Development
 port: 4000
 host: 0.0.0.0

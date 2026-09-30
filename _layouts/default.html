@@ -3,37 +3,20 @@
 {% include init.html %}<!DOCTYPE html>
 <html lang="{{ lang }}">
 {% include head.html %}
-
 <body class="lang-{{ lang }}">
-  <nav class="toolbar d-print-none">
-    {% include lang-switch.html %}
-    <button type="button" onclick="printResume()" class="toolbar-button">
-      <i class="fas fa-print"></i>{{ ui.print }}
-    </button>
-    <button type="button" onclick="generatePDF()" class="toolbar-button" id="pdfButton">
-      <i class="fas fa-file-pdf"></i>{{ ui.pdf }}
-    </button>
-  </nav>
+  <a class="skip-link" href="#main">{{ ui.skip }}</a>
+  {% include header.html %}
 
-  <div class="wrapper">
-    {% include sidebar.html %}
-
-    <div class="main-wrapper">
-      {% include cv.html %}
-    </div>
-  </div>
+  <main id="main">
+    {%- for section in site.sections -%}
+      {%- capture section_file -%}sections/{{ section }}.html{%- endcapture -%}
+      {% include {{ section_file }} %}
+    {%- endfor -%}
+  </main>
 
   {% include footer.html %}
 
-  {% include scripts.html %}
-  <script>
-    window.RESUME = {
-      printUrl: "{{ site.baseurl }}{{ lang_info.url }}print/",
-      pdfName: "{{ d.sidebar.name | replace: ' ', '_' }}_{{ ui.pdf_suffix | default: 'CV' }}.pdf",
-      generating: "{{ ui.generating }}"
-    };
-  </script>
-  <script src="{{ site.baseurl }}/assets/js/pdf-generator.js"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  {% if site.analytics %}{% include analytics.html %}{% endif %}
 </body>
-
 </html>

@@ -1,0 +1,25 @@
+{%- comment -%}
+  이메일·학술 링크 버튼 묶음. include.variant: hero | footer
+  인쇄 시에는 .label 대신 .print-only (실제 주소)가 표시됩니다.
+{%- endcomment -%}
+{%- assign cv_pdf = c.cv_pdf[lang] -%}
+<ul class="link-list link-list--{{ include.variant }}">
+  {%- if c.email %}
+  <li><a class="btn btn-primary" href="mailto:{{ c.email }}"><i class="fas fa-envelope" aria-hidden="true"></i><span class="label">{% if include.variant == "footer" %}{{ c.email }}{% else %}{{ ui.email }}{% endif %}</span><span class="print-only">{{ c.email }}</span></a></li>
+  {%- endif %}
+  {%- if c.scholar %}
+  <li><a class="btn" href="https://scholar.google.com/citations?user={{ c.scholar }}" target="_blank" rel="noopener"><i class="fab fa-google-scholar" aria-hidden="true"></i><span class="label">Google Scholar</span><span class="print-only">scholar.google.com/citations?user={{ c.scholar }}</span></a></li>
+  {%- endif %}
+  {%- if c.github %}
+  <li><a class="btn" href="https://github.com/{{ c.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span class="label">GitHub</span><span class="print-only">github.com/{{ c.github }}</span></a></li>
+  {%- endif %}
+  {%- if c.linkedin %}
+  <li><a class="btn" href="https://www.linkedin.com/in/{{ c.linkedin }}/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span><span class="print-only">linkedin.com/in/{{ c.linkedin }}</span></a></li>
+  {%- endif %}
+  {%- if c.orcid %}
+  <li><a class="btn" href="https://orcid.org/{{ c.orcid }}" target="_blank" rel="noopener"><i class="fab fa-orcid" aria-hidden="true"></i><span class="label">ORCID</span><span class="print-only">orcid.org/{{ c.orcid }}</span></a></li>
+  {%- endif %}
+  {%- if cv_pdf %}
+  <li class="no-print"><a class="btn" href="{{ cv_pdf | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down" aria-hidden="true"></i><span class="label">{{ ui.cv }}</span></a></li>
+  {%- endif %}
+</ul>

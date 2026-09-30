@@ -1,8 +1,14 @@
 {%- comment -%}
-  현재 페이지 언어(page.lang)에 맞는 데이터 파일(_data/<lang>.yml)을 d 로 불러옵니다.
-  모든 include 는 site.data 대신 d / ui 를 사용합니다.
+  현재 페이지 언어(page.lang)에 맞는 데이터를 불러옵니다.
+    d    : _data/<lang>.yml   (언어별 문구)
+    ui   : d.ui               (버튼·라벨 번역)
+    c    : _data/common.yml   (공용 연락처·링크)
+    pubs : _data/publications.yml
 {%- endcomment -%}
 {%- assign lang = page.lang | default: site.default_lang -%}
 {%- assign d = site.data[lang] -%}
 {%- assign ui = d.ui -%}
+{%- assign c = site.data.common -%}
+{%- assign pubs = site.data.publications -%}
 {%- assign lang_info = site.languages | where: "code", lang | first -%}
+{%- assign home_url = lang_info.url | relative_url -%}

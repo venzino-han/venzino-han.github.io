@@ -5,3 +5,7 @@ _site/
 .bundle/
 vendor/
 graft/
+
+# 비밀 정보
+github_token.txt
+*.token

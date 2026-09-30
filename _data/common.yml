@@ -1,0 +1,25 @@
+#
+# 언어와 무관한 공용 정보 (영문/한국어 페이지 모두에 사용)
+#
+
+initials: DH # 프로필 사진이 없을 때 표시할 이니셜
+avatar: # 정사각형 사진을 assets/images/ 에 넣고 파일명을 입력 (예: profile.jpg)
+
+# 연락처 · 외부 링크 (비워두면 표시되지 않음)
+email: hmhoy321@kaist.ac.kr
+github: venzino-han
+scholar: M81V1F4AAAAJ # scholar.google.com/citations?user=<ID>
+linkedin: donghee-han-a5b50b180 # linkedin.com/in/<ID>
+orcid: # 0000-0000-0000-0000
+
+# CV PDF 파일 (assets/files/ 에 넣고 경로 입력, 비워두면 버튼 숨김)
+cv_pdf:
+  en: # /assets/files/Donghee_Han_CV_en.pdf
+  ko: # /assets/files/Donghee_Han_CV_ko.pdf
+
+# Google Scholar 피인용 수 (자동 갱신되지 않으므로 가끔 직접 수정)
+citations: "120+" # 2026-09 기준
+
+# 논문 저자 목록에서 굵게 표시할 본인 이름
+self_names:
+  - Donghee Han
