@@ -2260,3 +2260,13 @@ a:hover {
     padding-top: 5pt;
   }
 }
+
+/* Stamina card: stim-pack style syringe icon */
+.how-card:last-child .how-icon {
+  background: #fde8e8;
+  color: #d23434;
+}
+:root[data-theme="dark"] .how-card:last-child .how-icon {
+  background: rgba(240, 90, 90, 0.16);
+  color: #ff8a8a;
+}
