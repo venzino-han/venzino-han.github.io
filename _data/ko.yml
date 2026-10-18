@@ -68,7 +68,7 @@ profile:
   role: AI Research Engineer
   affiliation: KAIST 데이터사이언스대학원 박사과정 · 2027.02 졸업예정
   bio: |
-    **KAIST 데이터사이언스대학원** Knowledge System Lab에서 연구하고 있는 박사과정생(2027년 2월 졸업예정)이자
+    **KAIST 데이터사이언스대학원** Knowledge Service Lab에서 연구하고 있는 박사과정생(2027년 2월 졸업예정)이자
     AI 리서치 엔지니어입니다. 저의 강점은 **복잡한 문제를 구조화하고, 끝까지 실행하여 결과로 만드는 능력**입니다.
     **LLM, 추천 시스템, AI 에이전트의 신뢰성·안전성**을 연구하며, NeurIPS, EMNLP, ACL, CIKM, SIGIR, CVPR, MICCAI 등
     국제우수학회 및 SCIE 저널에 총 29편의 논문을 발표했습니다.
@@ -154,7 +154,7 @@ publications:
 experience:
   title: 경력
   items:
-    - org: KAIST Knowledge System Lab
+    - org: KAIST Knowledge Service Lab
       logo: kaist.svg
       role: Researcher
       period: 2022.03 – 현재

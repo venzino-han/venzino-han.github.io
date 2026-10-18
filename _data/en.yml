@@ -69,7 +69,7 @@ profile:
   affiliation: Ph.D. Candidate · KAIST Graduate School of Data Science
   bio: |
     I am an AI research engineer and a Ph.D. candidate at the **KAIST Graduate School of Data Science**
-    (Knowledge System Lab), expected to graduate in February 2027. My strength is **structuring complex
+    (Knowledge Service Lab), expected to graduate in February 2027. My strength is **structuring complex
     problems and carrying them through to results**. My research spans **LLMs, recommender systems, and the
     reliability and safety of AI agents**, with 29 publications at venues including NeurIPS, EMNLP, ACL,
     CIKM, SIGIR, CVPR, and MICCAI.
@@ -155,7 +155,7 @@ publications:
 experience:
   title: Experience
   items:
-    - org: KAIST Knowledge System Lab
+    - org: KAIST Knowledge Service Lab
       logo: kaist.svg
       role: Researcher
       period: 2022.03 – Present
