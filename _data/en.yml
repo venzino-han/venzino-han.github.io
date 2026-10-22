@@ -21,8 +21,8 @@ ui:
     publications: Publications
     experience: Experience
     education: Education
-    certifications: Certifications
     awards: Awards
+    certifications: Certifications
   menu: Menu
   theme: Toggle dark mode
   print: Print / Save as PDF
@@ -336,58 +336,70 @@ certifications:
   lead: Online specializations and certificates in machine learning, deep learning, data science, and data engineering.
   items:
     - name: "Data Mining Specialization"
+      logo: certs/uiuc.svg
       org: "University of Illinois at Urbana-Champaign"
       provider: "Coursera"
       date: "2021.07"
       id: "Q5F678KCQJDL"
     - name: "DeepLearning.AI TensorFlow Developer Specialization"
+      logo: certs/deeplearning-ai.png
       org: "DeepLearning.AI"
       provider: "Coursera"
       date: "2021.04"
       id: "NP2CC2WK9J9A"
     - name: "TensorFlow Developer Certificate"
+      logo: certs/tensorflow.svg
       provider: "TensorFlow Certificate Program"
       date: "2021.04"
       expires: "2024.04"
     - name: "Deep Learning Specialization"
+      logo: certs/deeplearning-ai.png
       org: "DeepLearning.AI"
       provider: "Coursera"
       date: "2021.03"
       id: "4S58HVH384CP"
     - name: "Statistics with Python Specialization"
+      logo: certs/umich.svg
       org: "University of Michigan"
       provider: "Coursera"
       date: "2021.02"
       id: "KAETPZ2MWJ8V"
     - name: "Mathematical Fundamentals for Data Science"
+      logo: certs/kmooc.png
       provider: "K-MOOC"
       date: "2020.06"
       id: "de21fdc017a541cd99c7c75e469cdb65"
     - name: "Machine Learning Specialization"
+      logo: certs/uw.svg
       org: "University of Washington"
       provider: "Coursera"
       date: "2020.04"
       id: "RFX73WSJMDLM"
     - name: "Data Structures and Algorithms Specialization"
+      logo: certs/coursera.png
       org: "UC San Diego & HSE"
       provider: "Coursera"
       date: "2020.02"
       id: "D53XWSZ6MQT8"
     - name: "Mathematics for Machine Learning Specialization"
+      logo: certs/imperial.svg
       org: "Imperial College London"
       provider: "Coursera"
       date: "2020.02"
       id: "VEY9K9LLECF3"
     - name: "ADsP (Advanced Data Analytics Semi-Professional)"
+      logo: certs/kdata.png
       provider: "Korea Data Agency"
       date: "2019.07"
       id: "ADsP-0201513"
     - name: "Data Engineering, Big Data, and Machine Learning on GCP"
+      logo: certs/gcloud.svg
       org: "Google Cloud"
       provider: "Coursera"
       date: "2019.06"
       id: "ZHY5TRVY6XTW"
     - name: "IBM Data Science Professional Certificate"
+      logo: certs/ibm.svg
       org: "IBM"
       provider: "Coursera"
       date: "2019.04"

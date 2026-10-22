@@ -1,13 +1,17 @@
 {%- assign ce = d.certifications -%}
 {%- if ce -%}
-<section id="certifications" class="section" aria-labelledby="certifications-title">
+<section id="certifications" class="section section--alt" aria-labelledby="certifications-title">
   <div class="container">
     {% include sections/section-head.html id="certifications" title=ce.title lead=ce.lead %}
 
     <ul class="cert-grid">
       {%- for item in ce.items %}
       <li class="cert">
+        {%- if item.logo %}
+        <span class="cert-logo"><img src="{{ '/assets/img/logos/' | append: item.logo | relative_url }}" alt="{{ item.org | default: item.provider }} logo" loading="lazy"></span>
+        {%- else %}
         <span class="cert-icon" aria-hidden="true"><i class="fas fa-certificate"></i></span>
+        {%- endif %}
         <div class="cert-body">
           <h3 class="cert-name">{{ item.name }}</h3>
           <p class="cert-org">{% if item.org %}{{ item.org }} · {% endif %}{{ item.provider }}</p>
