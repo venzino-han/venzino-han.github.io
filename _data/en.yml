@@ -330,6 +330,12 @@ awards:
 # ------------------------------------------------------------------ Banner (auto-rotating slides at the top)
 # image: file in assets/img/banner/ · link: "#section" anchor or external URL
 banner:
+- image: defense.svg
+  kicker: News · Oct 20, 2026
+  title: Successfully defended my Ph.D. dissertation
+  text: Passed the Ph.D. dissertation defense at the KAIST Graduate School of Data Science on October 20, 2026. Thank you to my advisor, committee members, and labmates.
+  link: '#education'
+  link_text: See education
 - image: neurips.svg
   kicker: News · NeurIPS 2026
   title: Two first-author papers accepted to NeurIPS 2026
