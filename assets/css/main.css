@@ -1659,6 +1659,68 @@ a:hover {
   }
 }
 
+
+/* ---------- Certifications ---------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.cert {
+  display: flex;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.cert-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-size: 15px;
+}
+
+.cert-name {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cert-org {
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: 13.5px;
+}
+
+.cert-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.cert-id {
+  word-break: break-all;
+}
+
+@media screen and (max-width: 760px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Responsive ---------- */
 @media screen and (max-width: 960px) {
   .nav-toggle {

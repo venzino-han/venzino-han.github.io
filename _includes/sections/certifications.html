@@ -1,0 +1,24 @@
+{%- assign ce = d.certifications -%}
+{%- if ce -%}
+<section id="certifications" class="section" aria-labelledby="certifications-title">
+  <div class="container">
+    {% include sections/section-head.html id="certifications" title=ce.title lead=ce.lead %}
+
+    <ul class="cert-grid">
+      {%- for item in ce.items %}
+      <li class="cert">
+        <span class="cert-icon" aria-hidden="true"><i class="fas fa-certificate"></i></span>
+        <div class="cert-body">
+          <h3 class="cert-name">{{ item.name }}</h3>
+          <p class="cert-org">{% if item.org %}{{ item.org }} · {% endif %}{{ item.provider }}</p>
+          <p class="cert-meta">
+            <span>{{ item.date }}{% if item.expires %} – {{ item.expires }} ({{ ui.expires }}){% endif %}</span>
+            {%- if item.id %}<span class="cert-id">{{ ui.credential_id }} {{ item.id }}</span>{% endif %}
+          </p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif -%}

@@ -34,6 +34,7 @@ sections:
   - publications
   - experience
   - education
+  - certifications
   - awards
 
 # 소개 섹션 상단 배너 자동 넘김 간격 (ms). 슬라이드 내용은 _data/<lang>.yml 의 banner
