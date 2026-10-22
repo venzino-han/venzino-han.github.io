@@ -9,11 +9,21 @@
 
   <main id="main" class="project-page">
     <div class="container container--narrow">
-      <a class="back-link" href="{{ home_url }}#experience"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ ui.back }}</a>
+      <a class="back-link" href="{{ home_url }}#{{ page.back_section | default: 'experience' }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ ui.back }}</a>
       <header class="project-page-head">
         <h1 class="project-page-title">{{ page.title }}</h1>
+        {%- if page.venue %}
+        <p class="project-page-venue"><span class="pub-badge">{{ page.venue }}</span>{% if page.authors %} <span class="project-page-authors">{% include authors.html authors=page.authors %}</span>{% endif %}</p>
+        {%- endif %}
         {%- if page.description %}
         <p class="project-page-desc">{{ page.description }}</p>
+        {%- endif %}
+        {%- if page.links %}
+        <p class="project-page-links">
+          {%- if page.links.doi %}<a class="tag tag--link" href="https://doi.org/{{ page.links.doi }}" target="_blank" rel="noopener"><i class="fas fa-link"></i>DOI</a>{% endif %}
+          {%- if page.links.arxiv %}<a class="tag tag--link" href="https://arxiv.org/abs/{{ page.links.arxiv }}" target="_blank" rel="noopener"><i class="fas fa-scroll"></i>arXiv</a>{% endif %}
+          {%- if page.links.url %}<a class="tag tag--link" href="{{ page.links.url }}" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i>Paper</a>{% endif %}
+        </p>
         {%- endif %}
       </header>
       <article class="prose project-body">

@@ -8,7 +8,7 @@
   {%- for l in site.languages %}
   {%- assign alt_url = l.url -%}
   {%- if page.project_id -%}
-    {%- assign counterpart = site.projects | where: "lang", l.code | where: "project_id", page.project_id | first -%}
+    {%- assign counterpart = site[page.collection] | where: "lang", l.code | where: "project_id", page.project_id | first -%}
     {%- if counterpart -%}{%- assign alt_url = counterpart.url -%}{%- endif -%}
   {%- endif %}
   <link rel="alternate" hreflang="{{ l.code }}" href="{{ alt_url | absolute_url }}">

@@ -15,6 +15,7 @@
 
 # ------------------------------------------------------------------ 2026
 - title: "PRISMIC: Reconstructing User Preference via Intent Decomposition and Consolidation"
+  detail: prismic
   authors: [Donghee Han, Jiwon Jeong, Hwanjun Song, Mun Yong Yi]
   venue_short: NeurIPS
   venue: The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 2026)
@@ -23,6 +24,7 @@
   role: first
 
 - title: Selective Answering for Medical VQA via Parallel Independent Claim Verification
+  detail: medvqa
   authors: [Donghee Han, Jiwon Jeong, Mun Yong Yi]
   venue_short: NeurIPS
   venue: The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 2026)
@@ -68,6 +70,7 @@
     ko: 구두 발표
 
 - title: "TAG-Rec: Grounding LLM-based Recommendation via Trigger-Anchored GRPO"
+  detail: tagrec
   authors: [Donghee Han, Jiwon Jeong, Hwanjun Song, Mun Yong Yi]
   venue_short: CIKM
   venue: The 2026 ACM International Conference on Information and Knowledge Management (CIKM 2026)
@@ -136,6 +139,7 @@
     doi: 10.1007/978-3-032-38224-5_54
 
 - title: "Distilling LLM Reasoning into Dense Encoders: Bridging the Accuracy-Efficiency Gap in Recommendation"
+  detail: r2end
   authors: [Donghee Han, Daeyoung Roh, A Young Kim, Hwanjun Song, Mun Yong Yi]
   venue_short: ACL Findings
   venue: "Findings of the Association for Computational Linguistics: ACL 2026"
@@ -147,6 +151,7 @@
 
 # ------------------------------------------------------------------ 2025
 - title: "Rethinking LLM-Based Recommendations: A Personalized Query-Driven Parallel Integration"
+  detail: querec
   authors: [Donghee Han, Hwanjun Song, Mun Yong Yi]
   venue_short: EMNLP Findings
   venue: "Findings of the Association for Computational Linguistics: EMNLP 2025"
@@ -157,6 +162,7 @@
     doi: 10.18653/v1/2025.findings-emnlp.446
 
 - title: RAG-based Unanswerable Question Detection in Clinical Text-to-SQL
+  detail: clinical-text2sql
   authors: [Donghee Han, Seungjae Lim, Mun Yong Yi]
   venue_short: CIKM
   venue: The 2025 ACM International Conference on Information and Knowledge Management (CIKM 2025)
@@ -167,6 +173,7 @@
     doi: 10.1145/3746252.3760821
 
 - title: Fine-Grained Multi-Prompt Essay Scoring with Multi-Level Disentanglement
+  detail: essay
   authors: [Donghee Han, Daeyoung Roh, Euihwan Han, Hwanjun Song, Mun Yong Yi]
   venue_short: DMKD
   venue: Data Mining and Knowledge Discovery (ECML-PKDD 2025 Journal Track)
@@ -188,6 +195,7 @@
     doi: 10.1109/wacv61041.2025.00121
 
 - title: Leveraging LLM-Generated Schema Descriptions for Unanswerable Question Detection in Clinical Data
+  detail: clinical-text2sql
   authors: [Donghee Han, Seungjae Lim, Daeyoung Roh, Sangryul Kim, Sehyun Kim, Mun Yong Yi]
   venue_short: COLING
   venue: The 31st International Conference on Computational Linguistics (COLING 2025)
