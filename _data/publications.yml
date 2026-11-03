@@ -68,6 +68,8 @@
   note:
     en: Oral presentation
     ko: 구두 발표
+  links:
+    doi: 10.1145/3799682.3840829
 
 - title: "TAG-Rec: Grounding LLM-based Recommendation via Trigger-Anchored GRPO"
   detail: tagrec
@@ -77,6 +79,8 @@
   year: 2026
   type: conference
   role: first
+  links:
+    doi: 10.1145/3799682.3840735
 
 - title: "LiteUP4Rec: Efficient User Profiling from LLM-Derived Semantic Supervision"
   authors: [Donghee Han, Daeyoung Roh, Jiwon Jeong, Mun Yong Yi]
@@ -85,6 +89,8 @@
   year: 2026
   type: conference
   role: first
+  links:
+    doi: 10.1145/3799682.3840665
 
 - title: "Every Preference Has Its Strength: Injecting Ordinal Semantics into LLM-Based Recommenders"
   authors: [Jiwon Jeong, Donghee Han, Sungrae Hong, Woosung Kang, Mun Yong Yi]

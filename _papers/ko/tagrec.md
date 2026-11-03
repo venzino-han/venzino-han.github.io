@@ -11,6 +11,8 @@ authors:
 - Hwanjun Song
 - Mun Yong Yi
 description: 트리거 아이템에 생성과 보상을 고정해 LLM 기반 추천 강화학습의 보상 희소 문제를 해결.
+links:
+  doi: 10.1145/3799682.3840735
 permalink: /ko/publications/tagrec/
 ---
 

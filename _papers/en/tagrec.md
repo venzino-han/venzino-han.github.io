@@ -11,6 +11,8 @@ authors:
 - Hwanjun Song
 - Mun Yong Yi
 description: Solving reward sparsity in RL for LLM-based recommendation by anchoring generation and reward on trigger items.
+links:
+  doi: 10.1145/3799682.3840735
 permalink: /publications/tagrec/
 ---
 
