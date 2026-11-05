@@ -174,6 +174,14 @@ experience:
             - Found through failure analysis that planning (which tools to combine, in what order) was the bottleneck; designed a harness that separates planning (with tool/equipment retrieval) from execution
             - Added execution verification and consistency-based selection over multiple independent rollouts, substantially improving the SLM's tool-calling performance and stability without relying on larger models
             - Equipment-knowledge RAG with verification, and zero-shot defect-type classification using pretrained vision models (VLMs, SAM3)
+        - title: "Synthetic Training Data for Solar-Image Segmentation with a Foundation Model (SAM 3)"
+          lead: true
+          detail: 8_solar_synthetic_data
+          bullets:
+            - Solo project in a domain with almost no ground-truth masks (NASA SDO solar prominences); only 33 human labels available
+            - Designed a physics-grounded synthetic data engine — 10 generators, 9,000+ images, each targeting one observed failure mode — and fine-tuned only the SAM 3 heads
+            - Raised cross-validated IoU from 0.26 to 0.64, above inter-annotator agreement (0.57), with date-grouped CV, a measured noise floor, and purpose-specific metrics
+            - Auto-labeled 9,241 objects across 2,920 frames and built 4 human-in-the-loop web services, including blind A/B comparison and full review
         - title: LLM-based Learning Process Simulation
           client: Creverse
           lead: true
