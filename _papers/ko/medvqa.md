@@ -5,6 +5,8 @@ project_id: medvqa
 back_section: publications
 title: Selective Answering for Medical VQA via Parallel Independent Claim Verification
 venue: NeurIPS 2026
+links:
+  url: https://openreview.net/pdf?id=jPgQvPpJTX
 authors:
 - Donghee Han
 - Jiwon Jeong

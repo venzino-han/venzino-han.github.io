@@ -22,6 +22,8 @@
   year: 2026
   type: conference
   role: first
+  links:
+    url: https://openreview.net/pdf?id=EHpJIOSRSH
 
 - title: Selective Answering for Medical VQA via Parallel Independent Claim Verification
   detail: medvqa
@@ -31,6 +33,8 @@
   year: 2026
   type: conference
   role: first
+  links:
+    url: https://openreview.net/pdf?id=jPgQvPpJTX
 
 - title: "Illuminating the Path: Reachability-Aware Supervision Curation for LLM-Based Recommendation"
   authors: [Donghee Han, Jiwon Jeong, Hwanjun Song, Mun Yong Yi]

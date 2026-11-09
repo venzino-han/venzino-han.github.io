@@ -5,6 +5,8 @@ project_id: prismic
 back_section: publications
 title: 'PRISMIC: Reconstructing User Preference via Intent Decomposition and Consolidation'
 venue: NeurIPS 2026
+links:
+  url: https://openreview.net/pdf?id=EHpJIOSRSH
 authors:
 - Donghee Han
 - Jiwon Jeong
