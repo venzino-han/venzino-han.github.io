@@ -43,6 +43,8 @@
   year: 2026
   type: conference
   role: first
+  links:
+    url: https://aclanthology.org/2026.emnlp-main.552/
 
 - title: "Every Answer Has Its Own Path: Agentic Routing for Retrieval-Augmented Table Question Answering"
   authors: [A Young Kim, Jisu Shin, Donghee Han, Mun Yong Yi]
@@ -51,6 +53,9 @@
   year: 2026
   type: conference
   role: co-author
+  links:
+    url: https://aclanthology.org/2026.emnlp-main.1589/
+    code: https://github.com/ayoung206/ATR
 
 - title: "HALT: Verification-Aware Stopping for Retrieval-Augmented Search Agents"
   authors: [Daeyoung Roh, Donghee Han]
@@ -61,6 +66,7 @@
   role: second
   links:
     arxiv: "2608.02009"
+    code: https://github.com/Noverse0/HALT
 
 - title: "No Logs, Only Catalogs: Catalog-to-Supervision Training for Recommendation with LLM-Simulated Preferences"
   authors: [Donghee Han, Jiwon Jeong, Hwanjun Song, Mun Yong Yi]
