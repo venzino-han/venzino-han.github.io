@@ -9,7 +9,7 @@
 meta:
   title: Donghee Han — AI Research Engineer
   description: >-
-    Donghee Han is an AI research engineer and Ph.D. candidate at KAIST working on
+    Donghee Han is an AI research engineer with a Ph.D. from KAIST working on
     LLM-based recommender systems, agentic AI & RAG, and graph neural networks.
   locale: en_US
 
@@ -69,10 +69,10 @@ profile:
   name: Donghee Han
   name_alt: 한동희
   role: AI Research Engineer
-  affiliation: Ph.D. Candidate · KAIST Graduate School of Data Science
+  affiliation: Ph.D. · KAIST Graduate School of Data Science
   bio: |
-    I am an AI research engineer and a Ph.D. candidate at the **KAIST Graduate School of Data Science**
-    (Knowledge Service Lab), expected to graduate in February 2027. My strength is **structuring complex
+    I am an AI research engineer with a Ph.D. from the **KAIST Graduate School of Data Science**
+    (Knowledge Service Lab; dissertation defended in October 2026; degree to be conferred in February 2027). My strength is **structuring complex
     problems and carrying them through to results**. My research spans **LLMs, recommender systems, and the
     reliability and safety of AI agents**, with 29 publications at venues including NeurIPS, EMNLP, ACL,
     CIKM, SIGIR, CVPR, and MICCAI.
@@ -277,7 +277,7 @@ experience:
 education:
   title: Education
   items:
-    - title: Ph.D. Candidate
+    - title: Ph.D.
       school: KAIST Graduate School of Data Science (Industrial & Systems Engineering)
       logo: kaist.svg
       period: 2023.09 – 2027.02
@@ -291,8 +291,8 @@ education:
       details:
         - "Research areas: Recommender Systems, Natural Language Processing"
         - "Graduated early in 3 semesters (GPA: 3.85/4.3)"
-    - title: B.S. in Industrial Design, Minor in Technology Management
-      school: KAIST
+    - title: B.S.
+      school: KAIST Department of Industrial Design (Minor in Technology Management)
       logo: kaist.svg
       period: 2009.02 – 2016.02
       details:

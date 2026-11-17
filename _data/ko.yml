@@ -9,7 +9,7 @@
 meta:
   title: 한동희 — AI Research Engineer
   description: >-
-    KAIST 데이터사이언스대학원 박사과정 한동희의 홈페이지입니다. LLM 기반 추천 시스템,
+    KAIST 데이터사이언스대학원 박사 한동희의 홈페이지입니다. LLM 기반 추천 시스템,
     에이전틱 AI와 RAG, 그래프 신경망을 연구합니다.
   locale: ko_KR
 
@@ -69,9 +69,9 @@ profile:
   name: 한동희
   name_alt: Donghee Han
   role: AI Research Engineer
-  affiliation: KAIST 데이터사이언스대학원 박사과정 · 2027.02 졸업예정
+  affiliation: KAIST 데이터사이언스대학원 박사 · 2027.02 학위 수여 예정
   bio: |
-    **KAIST 데이터사이언스대학원** Knowledge Service Lab에서 연구하고 있는 박사과정생(2027년 2월 졸업예정)이자
+    **KAIST 데이터사이언스대학원** Knowledge Service Lab에서 박사학위 논문 심사를 통과한(2026년 10월, 2027년 2월 학위 수여 예정)
     AI 리서치 엔지니어입니다. 저의 강점은 **복잡한 문제를 구조화하고, 끝까지 실행하여 결과로 만드는 능력**입니다.
     **LLM, 추천 시스템, AI 에이전트의 신뢰성·안전성**을 연구하며, NeurIPS, EMNLP, ACL, CIKM, SIGIR, CVPR, MICCAI 등
     국제우수학회 및 SCIE 저널에 총 29편의 논문을 발표했습니다.
@@ -276,7 +276,7 @@ experience:
 education:
   title: 학력
   items:
-    - title: 박사과정
+    - title: 박사
       school: KAIST 데이터사이언스대학원 (산업및시스템공학과)
       logo: kaist.svg
       period: 2023.09 – 2027.02
@@ -290,8 +290,8 @@ education:
       details:
         - "연구분야: 추천시스템, 자연어처리"
         - 3학기 조기졸업 (GPA 3.85/4.3)
-    - title: 학사 · 산업디자인학과 (기술경영 부전공)
-      school: KAIST
+    - title: 학사
+      school: KAIST 산업디자인학과 (기술경영 부전공)
       logo: kaist.svg
       period: 2009.02 – 2016.02
       details:
